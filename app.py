@@ -1,9 +1,6 @@
 import logging
-
 from random import randint
-
 from flask import Flask, render_template
-
 from flask_ask import Ask, statement, question, session
 
 
@@ -15,45 +12,24 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 
 @ask.launch
-
-def new_game():
-
+def welcome_intern():
     welcome_msg = render_template('welcome')
-
     return question(welcome_msg)
 
+@ask.intent('GetQuestion')
+def get_question():
+	return statement('No questions yet fuck off dude')
 
-@ask.intent("YesIntent")
+@ask.intent('NoobQuestion')
+def noob_question():
+	message = "For zero to one hundred, print fizz if the number is even, and print buzz if the number is odd"
+	return statement(message)
 
-def next_round():
-
-    numbers = [randint(0, 9) for _ in range(3)]
-
-    round_msg = render_template('round', numbers=numbers)
-
-    session.attributes['numbers'] = numbers[::-1]  # reverse
-
-    return question(round_msg)
-
-
-@ask.intent("AnswerIntent", convert={'first': int, 'second': int, 'third': int})
-
-def answer(first, second, third):
-	print session.attributes
-
-	winning_numbers = session.attributes['numbers']
-
-	if [first, second, third] == winning_numbers:
-
-		msg = render_template('win')
-
-	else:
-
-		msg = render_template('lose')
-
-	return statement(msg)
+@ask.intent('AMAZON.HelpIntent')
+def help_intent():
+	message = "Ask again"
+	return question(message).reprompt(message)
 
 
 if __name__ == '__main__':
-
     app.run(debug=True)

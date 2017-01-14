@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "GetQuestion"
+    },
+    {
+      "intent": "NoobQuestion"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
