@@ -252,7 +252,8 @@
     {
         "accepted": 131025, 
         "companies": "Amazon", 
-        "description": "Given two strings s and t, write a function to determine if t is an anagram of s. \r\n\r\nFor example,\r\ns = \"anagram\", t = \"nagaram\", return true.\r\ns = \"rat\", t = \"car\", return false.\r\n\r\n\r\nNote:\r\nYou may assume the string contains only lowercase alphabets.\r\n\r\nFollow up:\r\nWhat if the inputs contain unicode characters? How would you adapt your solution to such case?", 
+        "description": "Given two strings s and t, write a function to determine if t is an anagram of s.",
+        "example": "For example,s = anagram, t = nagaram, return true. s = rat, t = car, return false.Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?", 
         "difficulty": "Easy", 
         "hints": [
             "Hash Table", 
