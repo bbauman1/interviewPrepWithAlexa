@@ -66,6 +66,10 @@ for link in links:
 	dic['total'] = int(total)
 	dic['difficulty'] = difficulty
 
+	number = soup.find("div", class_="question-title clearfix")
+	q_num = str(number.text).split('.')[0].strip()	
+	dic['number'] = int(q_num)
+
 	description = soup.find("meta",  property="og:description")
 	dic['description'] = str(description['content'].encode('utf-8')).strip()
 	json_arr.append(dic)
