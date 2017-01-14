@@ -36,7 +36,7 @@
     {
         "accepted": 14133, 
         "companies": "Amazon", 
-        "description": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.\r\n\r\nStrings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.\r\n\r\nThe order of output does not matter.\r\n\r\nExample 1:\r\n\r\nInput:\r\ns: \"cbaebabacd\" p: \"abc\"\r\n\r\nOutput:\r\n[0, 6]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\r\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput:\r\ns: \"abab\" p: \"ab\"\r\n\r\nOutput:\r\n[0, 1, 2]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\r\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\r\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".", 
+        "description": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.\r\n\r\nStrings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100. The order of output does not matter. Example 1: Input:\r\ns: \"cbaebabacd\" p: \"abc\"\r\n\r\nOutput:\r\n[0, 6]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\r\nThe substring with start index = 6 is \"bac\", which is an anagram of a b c. Example 2:\r\n\r\nInput:\r\ns: \"abab\" p: \"ab\"\r\n\r\nOutput:\r\n[0, 1, 2]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\r\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\r\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".", 
         "difficulty": "Easy", 
         "hints": [
             "Hash Table"
@@ -128,7 +128,7 @@
     {
         "accepted": 164444, 
         "companies": "Amazon", 
-        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.\r\n\r\nExample:\r\n\r\nInput: \"babad\"\r\n\r\nOutput: \"bab\"\r\n\r\nNote: \"aba\" is also a valid answer.\r\n\r\n\r\n\r\nExample:\r\n\r\nInput: \"cbbd\"\r\n\r\nOutput: \"bb\"", 
+        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. Example: Input: b a b a d Output: b a b Note: a b a is also a valid answer. Example: Input: c b b d Output: b b", 
         "difficulty": "Medium", 
         "hints": [
             "String"
@@ -144,7 +144,8 @@
     {
         "accepted": 62251, 
         "companies": "Amazon", 
-        "description": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:\r\n\r\n\r\n\r\nIntegers in each row are sorted in ascending from left to right.\r\nIntegers in each column are sorted in ascending from top to bottom.\r\n\r\n\r\n\r\n\r\nFor example,\r\n\r\nConsider the following matrix:\r\n\r\n\r\n[\r\n  [1,   4,  7, 11, 15],\r\n  [2,   5,  8, 12, 19],\r\n  [3,   6,  9, 16, 22],\r\n  [10, 13, 14, 17, 24],\r\n  [18, 21, 23, 26, 30]\r\n]\r\n\r\n\r\nGiven target = 5, return true.\r\nGiven target = 20, return false.", 
+        "description": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: Integers in each row are sorted in ascending from left to right. Integers in each column are sorted in ascending from top to bottom.",
+        "example": "For example, Consider the following matrix: [1,   4,  7, 11, 15],  [2,   5,  8, 12, 19],  [3,   6,  9, 16, 22],  [10, 13, 14, 17, 24],  [18, 21, 23, 26, 30] ] Given target = 5, return true. Given target = 20, return false.", 
         "difficulty": "Medium", 
         "hints": [
             "Binary Search", 
@@ -159,7 +160,7 @@
     {
         "accepted": 180214, 
         "companies": "Amazon", 
-        "description": "Reverse a singly linked list.\r\n\r\nclick to show more hints.\r\n\r\nHint:\r\nA linked list can be reversed either iteratively or recursively. Could you implement both?", 
+        "description": "Reverse a singly linked list. Hint: A linked list can be reversed either iteratively or recursively. Could you implement both?", 
         "difficulty": "Easy", 
         "hints": [
             "Linked List"
@@ -175,7 +176,7 @@
     {
         "accepted": 113946, 
         "companies": "Amazon", 
-        "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.\r\n\r\n\r\n\r\nAccording to the definition of LCA on Wikipedia: \u201cThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).\u201d\r\n\r\n\r\n\r\n        _______6______\r\n       /              \\\r\n    ___2__          ___8__\r\n   /      \\        /      \\\r\n   0      _4       7       9\r\n         /  \\\r\n         3   5\r\n\r\n\r\n\r\nFor example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.", 
+        "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.\r\n\r\n\r\n\r\nAccording to the definition of LCA on Wikipedia: \u201cThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).\u201d\r\n\r\n\r\n\r\n        _______6______\r\n       /              \\\r\n    ___2__          ___8__\r\n   /      \\        /      \\\r\n   0      _4       7       9\r\n         /  \\\r\n         3   nFor example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.", 
         "difficulty": "Easy", 
         "hints": [
             "Tree"
@@ -207,7 +208,7 @@
     {
         "accepted": 107442, 
         "companies": "Amazon", 
-        "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.\r\n\r\n\r\npush(x) -- Push element x onto stack.\r\n\r\n\r\npop() -- Removes the element on top of the stack.\r\n\r\n\r\ntop() -- Get the top element.\r\n\r\n\r\ngetMin() -- Retrieve the minimum element in the stack.\r\n\r\n\r\n\r\n\r\nExample:\r\n\r\nMinStack minStack = new MinStack();\r\nminStack.push(-2);\r\nminStack.push(0);\r\nminStack.push(-3);\r\nminStack.getMin();   --> Returns -3.\r\nminStack.pop();\r\nminStack.top();      --> Returns 0.\r\nminStack.getMin();   --> Returns -2.", 
+        "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. push x -- Push element x onto stack. pop() -- Removes the element on top of the stack. top() -- Get the top element. getMin() -- Retrieve the minimum element in the stack. Example: MinStack minStack = new MinStack(); minStack.push(-2); minStack.push 0; minStack.push -3; minStack.getMin ;   --> Returns -3. minStack.pop(); minStack.top(); Returns 0. minStack.getMin(); Returns -2.", 
         "difficulty": "Easy", 
         "hints": [
             "Stack", 
@@ -268,7 +269,8 @@
     {
         "accepted": 102660, 
         "companies": "Amazon", 
-        "description": "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.\r\n\r\nFor example,\r\nGiven [3,2,1,5,6,4] and k = 2, return 5.\r\n\r\n\r\nNote: \r\nYou may assume k is always valid, 1 \u2264 k \u2264 array's length.\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.", 
+        "description": "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.For example.",
+        "example": "Given [3,2,1,5,6,4] and k = 2, return 5. Note: You may assume k is always valid.", 
         "difficulty": "Medium", 
         "hints": [
             "Heap", 
@@ -477,7 +479,8 @@
     {
         "accepted": 136082, 
         "companies": "Amazon", 
-        "description": "Given a set of distinct integers, nums, return all possible subsets.\r\n\r\nNote: The solution set must not contain duplicate subsets.\r\n\r\n\r\nFor example,\r\nIf nums = [1,2,3], a solution is:\r\n\r\n\r\n\r\n[\r\n  [3],\r\n  [1],\r\n  [2],\r\n  [1,2,3],\r\n  [1,3],\r\n  [2,3],\r\n  [1,2],\r\n  []\r\n]", 
+        "description": "Given a set of distinct integers, nums, return all possible subsets. Note: The solution set must not contain duplicate subsets.",
+        "example": "For example, If nums = [1,2,3], a solution is: [3],[1], [2], [1,2,3], [1,3], [2,3], [1,2], and empty set ", 
         "difficulty": "Medium", 
         "hints": [
             "Array", 
@@ -493,7 +496,8 @@
     {
         "accepted": 146977, 
         "companies": "Amazon", 
-        "description": "Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).\r\n\r\n\r\nFor example:\r\nGiven binary tree [3,9,20,null,null,15,7],\r\n\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n\r\n\r\n\r\nreturn its level order traversal as:\r\n\r\n[\r\n  [3],\r\n  [9,20],\r\n  [15,7]\r\n]", 
+        "description": "Given a binary tree, return the level order traversal of its nodes' values.",
+        "example": "(ie, from left to right, level by level). For example: Given binary tree [3,9,20,null,null,15,7]   3,  9  20, 15   7. Return its level order traversal as: array of [3], array of [9,20], and array of [15,7]]" ,
         "difficulty": "Easy", 
         "hints": [
             "Tree", 
