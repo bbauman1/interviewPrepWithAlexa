@@ -32,6 +32,9 @@
     },
     {
       "intent": "Stop"
+    },
+    {
+      "intent": "AnotherQuestion"
     }
   ]
 }

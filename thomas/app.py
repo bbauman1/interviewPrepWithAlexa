@@ -79,13 +79,13 @@ def question_type_difficulty(Diff):
 	q = get_difficulty(norm_difficulty)
 
 	session.attributes['company'] = q 
-	session.attributes[norm_difficulty] = norm_difficulty
+	session.attributes['difficulty'] = norm_difficulty
 	#start_timer(20)
 	print("++++++++++++++++")
 	print(q['name'])
 	print("++++++++++++++++")
 
-	return question(q['description'] + 'Would you like me to repeat the question or give an example?')
+	return question(q['description'] + ' Would you like me to repeat the question or give an example?')
 
 @ask.intent('QuestionExample')
 def example_for_question():
@@ -109,6 +109,17 @@ def repeat_question():
 @ask.intent('Stop')
 def stop_question():
 	return statement('Thanks for coding with us!')
+
+@ask.intent('AnotherQuestion')
+def ask_another_question():
+	if 'company' not in session.attributes:
+		return question('Question not asked yet. Do you want an easy, medium, or hard coding question?')
+	if 'difficulty' not in session.attributes:
+		return question('Difficulty not set. Do you want an easy, medium, or hard coding question?')
+	norm_difficulty = session.attributes['difficulty']
+	q = get_difficulty(norm_difficulty)
+	session.attributes['company'] = q 
+	return question(q['description']+' Would you like me to repeat the question or give an example?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
