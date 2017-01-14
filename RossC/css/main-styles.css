@@ -1,4 +1,46 @@
 html, body {
-   color: #ffffff;
-   background-color: #000000;
+   background-color: #F5EBEE;
+   font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.navbar {
+   border: none;
+   outline: none;
+   margin-bottom: 0;
+   -webkit-border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+   border-radius: 0 !important;
+   margin-bottom: 20px;
+}
+
+.navbar-inverse li > a:hover, .navbar-inverse li > a:focus {
+   color: #F5EBEE;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-inverse .navbar-brand {
+   color: #F5EBEE;
+}
+
+.navbar-inverse .active > a, .navbar-inverse .active >   
+a:hover, .navbar-inverse .active > a:focus {
+   color: white;
+   background-color: #F5EBEE;
+}
+
+.navbar-inverse {
+   background-color: #F44336;
+}
+
+.nav li > a:hover, .nav > li > a:focus {
+   text-decoration: none;
+   background-color: silver;
+}
+
+.navbar-inverse li > a {
+   color: white;
+}
+
+#title .btn {
+   display: inline;
+   padding: 10px;
 }
