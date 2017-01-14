@@ -8,8 +8,9 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/styles.css" />
 	</head>
-	<body>
+	<body onload="onload()">
 		<section>
 			<!-- Header -->
 				<div id="header">
@@ -18,10 +19,10 @@
 					<p>Simulate interviews the best way possible
 					<br />
 					Get hired by top companies</p>
-					<a class="button scrolly" href="#two" style="margin-top:32px;">Fuck Alexa</a>
+					<a class="button scrolly go-to-dbthing" style="margin-top:32px;">Fuck Alexa</a>
 				</div>
 		</section>
-		<section id="two">
+		<section id="dbthing">
 			<div class="box container">
 				<header>
 					<h2>Review your past recordings to improve your skills</h2>
@@ -46,11 +47,9 @@
 								<td>1</td>
 								<td>Two Sum</td>
 								<td>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution.</td>
-								
 								<td>
 									<audio controls>
-									  <source src="horse.ogg" type="audio/ogg">
-									  <source src="horse.mp3" type="audio/mpeg">
+									  <source type="audio/wav">
 										Your browser does not support the audio element.
 									</audio>
 								</td>
@@ -75,10 +74,6 @@
 							</tr>
 						</tbody>
 						<tfoot>
-							<tr>
-								<td colspan="3"></td>
-								<td>100.00</td>
-							</tr>
 						</tfoot>
 					</table>
 				</div>
@@ -86,12 +81,62 @@
 		</div>
 
 		<!-- Scripts -->
+
+			<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyBLJ0riHM8Z-GumKhRDOUFofYPel4AhJmU",
+			    authDomain: "alexa-76077.firebaseapp.com",
+			    databaseURL: "https://alexa-76077.firebaseio.com",
+			    storageBucket: "alexa-76077.appspot.com",
+			    messagingSenderId: "391712165263"
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
+			<script>
+
+				function onload() {
+
+					firebase.auth().signInAnonymously().catch(function(error) {
+						// Handle Errors here.
+						var errorCode = error.code;
+						var errorMessage = error.message;
+						// ...
+						});
+				}
+
+				function getStuff() {
+					var storage = firebase.storage();
+					var pathReference = storage.ref('');
+					alert(pathReference.child('cat_y.wav').downloadURL);
+				}
+
+				firebase.auth().onAuthStateChanged(function(user) {
+				  if (user) {
+				    // User is signed in.
+				    var isAnonymous = user.isAnonymous;
+				    var uid = user.uid;
+						getStuff();
+				    // ...
+				  } else {
+				    // User is signed out.
+				    // ...
+				  }
+				  // ...
+				});
+
+			</script>
+
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/ie/scripts.js"></script>
 
 	</body>
 </html>
