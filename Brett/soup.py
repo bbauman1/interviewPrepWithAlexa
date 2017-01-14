@@ -1,17 +1,77 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import json
+import os
+import urllib2
+from pprint import pprint
 
-html = requests.get("https://leetcode.com/problems/two-sum/")
+def read_json():
+	dic = {}
+	with open('companies.json', 'r') as fp:
+		dic = json.load(fp)
+	return dic
 
-soup = BeautifulSoup(html.text, "lxml")
+def write_json(dic):
+	with open('companies.json', 'w') as fp:
+		json.dump(dic, fp, sort_keys=True, indent=4)
 
-companies = soup.find(id="tags")
+url = os.getcwd() + "/amazon-qs.htm"
+page = open(url)
+soup = BeautifulSoup(page.read(), "lxml")
+links = []
 
-spans = soup.find_all("span", class_="hidebutton")
-for span in spans:
-	
-	print span.text
+problems = soup.findAll(href=re.compile('.*problem.*'))
+for p in problems:
+	if p == '/problems/reverse-words-in-a-string-ii/':
+		continue
+	links.append(p['href'])
+
+
+# dic = read_json()
+json_arr = []
+
+for link in links:
+	prob = 'https://leetcode.com' + link
+	dic = {}
+	html = requests.get(prob)
+
+	soup = BeautifulSoup(html.text, "lxml")
+
+	companies = soup.find(id="tags")
+
+	try:
+		name = str(soup.title.string.split('|')[0]).strip()
+		dic['name'] = name
+	except:
+		continue
+	spans = soup.find_all("span", class_="hidebutton")
+	if(len(spans) == 0):
+		continue
+	hints = str(spans[0].text).strip().split('\n')
+	similars = []
+	if(len(spans) > 1):		
+		similars = str(spans[1].text).strip().split('\n')
+	dic['hints'] = hints
+	dic['similar_problems'] = similars
+
+	dic['companies'] = 'Amazon'
+
+	infos = soup.find_all("div", class_="question-info")
+	info = str(infos[0].text).strip().split('\n')
+	accepted = info[0].split(':')[1].strip()
+	total = info[1].split(':')[1].strip()
+	difficulty = info[2].split(':')[1].strip()
+	dic['accepted'] = accepted
+	dic['total'] = total
+	dic['difficulty'] = difficulty
+
+	description = soup.find("meta",  property="og:description")
+	dic['description'] = str(description['content'].encode('utf-8')).strip()
+	json_arr.append(dic)
+
+# pprint(json_arr)
+write_json(json_arr)
 
 
 

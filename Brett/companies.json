@@ -1,0 +1,783 @@
+[
+    {
+        "accepted": "106143", 
+        "companies": "Amazon", 
+        "description": "Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set.\r\n\r\n\r\n\r\nget(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.\r\nset(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Design"
+        ], 
+        "name": "LRU Cache", 
+        "similar_problems": [
+            "(H) LFU Cache"
+        ], 
+        "total": "663895"
+    }, 
+    {
+        "accepted": "395608", 
+        "companies": "Amazon", 
+        "description": "Given an array of integers, return indices of the two numbers such that they add up to a specific target.\r\n\r\nYou may assume that each input would have exactly one solution.\r\n\r\n\r\nExample:\r\n\r\nGiven nums = [2, 7, 11, 15], target = 9,\r\n\r\nBecause nums[0] + nums[1] = 2 + 7 = 9,\r\nreturn [0, 1].\r\n\r\n\r\n\r\n\r\nUPDATE (2016/2/13):\r\nThe return format had been changed to zero-based indices. Please read the above updated description carefully.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Array", 
+            "Hash Table"
+        ], 
+        "name": "Two Sum", 
+        "similar_problems": [
+            "(M) 3Sum", 
+            " (M) 4Sum", 
+            " (M) Two Sum II - Input array is sorted", 
+            " (E) Two Sum III - Data structure design"
+        ], 
+        "total": "1319620"
+    }, 
+    {
+        "accepted": "45272", 
+        "companies": "Amazon", 
+        "description": "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. \r\n\r\nDesign an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.\r\n\r\n\r\nFor example, you may serialize the following tree\r\n\r\n    1\r\n   / \\\r\n  2   3\r\n     / \\\r\n    4   5\r\n\r\nas \"[1,2,3,null,null,4,5]\", just the same as how LeetCode OJ serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.\r\n\r\n\r\n\r\nNote: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.\r\n\r\n\r\nCredits:Special thanks to @Louis1992 for adding this problem and creating all test cases.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Tree", 
+            "Design"
+        ], 
+        "name": "Serialize and Deserialize Binary Tree", 
+        "similar_problems": [
+            "(M) Encode and Decode Strings", 
+            " (M) Serialize and Deserialize BST"
+        ], 
+        "total": "143106"
+    }, 
+    {
+        "accepted": "82733", 
+        "companies": "Amazon", 
+        "description": "Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\r\n\r\nExample 1:\r\n11110110101100000000\r\nAnswer: 1\r\nExample 2:\r\n11000110000010000011\r\nAnswer: 3\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Depth-first Search", 
+            "Breadth-first Search", 
+            "Union Find"
+        ], 
+        "name": "Number of Islands", 
+        "similar_problems": [
+            "(M) Surrounded Regions", 
+            " (M) Walls and Gates", 
+            " (H) Number of Islands II", 
+            " (M) Number of Connected Components in an Undirected Graph"
+        ], 
+        "total": "256026"
+    }, 
+    {
+        "accepted": "4158", 
+        "companies": "Amazon", 
+        "description": "Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.\r\n\r\n\r\n\r\nget(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.\r\nput(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item. For the purpose of this problem, when there is a tie (i.e., two or more keys that have the same frequency), the least recently used key would be evicted.\r\n\r\n\r\nFollow up:\r\nCould you do both operations in O(1) time complexity?\r\n\r\nExample:\r\n\r\nLFUCache cache = new LFUCache( 2 /* capacity */ );\r\n\r\ncache.put(1, 1);\r\ncache.put(2, 2);\r\ncache.get(1);       // returns 1\r\ncache.put(3, 3);    // evicts key 2\r\ncache.get(2);       // returns -1 (not found)\r\ncache.get(3);       // returns 3.\r\ncache.put(4, 4);    // evicts key 1.\r\ncache.get(1);       // returns -1 (not found)\r\ncache.get(3);       // returns 3\r\ncache.get(4);       // returns 4", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Design"
+        ], 
+        "name": "LFU Cache", 
+        "similar_problems": [
+            "(H) LRU Cache"
+        ], 
+        "total": "21576"
+    }, 
+    {
+        "accepted": "14132", 
+        "companies": "Amazon", 
+        "description": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.\r\n\r\nStrings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.\r\n\r\nThe order of output does not matter.\r\n\r\nExample 1:\r\n\r\nInput:\r\ns: \"cbaebabacd\" p: \"abc\"\r\n\r\nOutput:\r\n[0, 6]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\r\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput:\r\ns: \"abab\" p: \"ab\"\r\n\r\nOutput:\r\n[0, 1, 2]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\r\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\r\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Hash Table"
+        ], 
+        "name": "Find All Anagrams in a String", 
+        "similar_problems": [
+            "(E) Valid Anagram"
+        ], 
+        "total": "42393"
+    }, 
+    {
+        "accepted": "79088", 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.\r\n\r\n\r\n\r\nAccording to the definition of LCA on Wikipedia: \u201cThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).\u201d\r\n\r\n\r\n\r\n        _______3______\r\n       /              \\\r\n    ___5__          ___1__\r\n   /      \\        /      \\\r\n   6      _2       0       8\r\n         /  \\\r\n         7   4\r\n\r\n\r\n\r\nFor example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3. Another example is LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Lowest Common Ancestor of a Binary Tree", 
+        "similar_problems": [
+            "(E) Lowest Common Ancestor of a Binary Search Tree"
+        ], 
+        "total": "269824"
+    }, 
+    {
+        "accepted": "92215", 
+        "companies": "Amazon", 
+        "description": "A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.\r\n\r\n\r\n\r\nReturn a deep copy of the list.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Hash Table", 
+            "Linked List"
+        ], 
+        "name": "Copy List with Random Pointer", 
+        "similar_problems": [
+            "(M) Clone Graph"
+        ], 
+        "total": "346267"
+    }, 
+    {
+        "accepted": "161718", 
+        "companies": "Amazon", 
+        "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\r\n\r\nThe brackets must close in the correct order, \"()\" and \"()[]{}\" are all valid but \"(]\" and \"([)]\" are not.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Stack", 
+            "String"
+        ], 
+        "name": "Valid Parentheses", 
+        "similar_problems": [
+            "(M) Generate Parentheses", 
+            " (H) Longest Valid Parentheses", 
+            " (H) Remove Invalid Parentheses"
+        ], 
+        "total": "503228"
+    }, 
+    {
+        "accepted": "16645", 
+        "companies": "Amazon", 
+        "description": "Design a data structure that supports all following operations in average O(1) time.\r\n\r\n\r\n\r\ninsert(val): Inserts an item val to the set if not already present.\r\nremove(val): Removes an item val from the set if present.\r\ngetRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.\r\n\r\n\r\n\r\nExample:\r\n\r\n// Init an empty set.\r\nRandomizedSet randomSet = new RandomizedSet();\r\n\r\n// Inserts 1 to the set. Returns true as 1 was inserted successfully.\r\nrandomSet.insert(1);\r\n\r\n// Returns false as 2 does not exist in the set.\r\nrandomSet.remove(2);\r\n\r\n// Inserts 2 to the set, returns true. Set now contains [1,2].\r\nrandomSet.insert(2);\r\n\r\n// getRandom should return either 1 or 2 randomly.\r\nrandomSet.getRandom();\r\n\r\n// Removes 1 from the set, returns true. Set now contains [2].\r\nrandomSet.remove(1);\r\n\r\n// 2 was already in the set, so return false.\r\nrandomSet.insert(2);\r\n\r\n// Since 2 is the only number in the set, getRandom always return 2.\r\nrandomSet.getRandom();", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Hash Table", 
+            "Design"
+        ], 
+        "name": "Insert Delete GetRandom O(1)", 
+        "similar_problems": [
+            "(H) Insert Delete GetRandom O(1) - Duplicates allowed"
+        ], 
+        "total": "43309"
+    }, 
+    {
+        "accepted": "78284", 
+        "companies": "Amazon", 
+        "description": "Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].\r\n\r\nSolve it without division and in O(n).\r\n\r\nFor example, given [1,2,3,4], return [24,12,8,6].\r\n\r\nFollow up:\r\nCould you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Product of Array Except Self", 
+        "similar_problems": [
+            "(H) Trapping Rain Water", 
+            " (M) Maximum Product Subarray", 
+            " (H) Paint House II"
+        ], 
+        "total": "166263"
+    }, 
+    {
+        "accepted": "47940", 
+        "companies": "Amazon", 
+        "description": "Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.\r\n\r\nFor example,\r\nGiven nums = [1,3,-1,-3,5,3,6,7], and k = 3.\r\n\r\n\r\nWindow position                Max\r\n---------------               -----\r\n[1  3  -1] -3  5  3  6  7       3\r\n 1 [3  -1  -3] 5  3  6  7       3\r\n 1  3 [-1  -3  5] 3  6  7       5\r\n 1  3  -1 [-3  5  3] 6  7       5\r\n 1  3  -1  -3 [5  3  6] 7       6\r\n 1  3  -1  -3  5 [3  6  7]      7\r\n\r\n\r\nTherefore, return the max sliding window as [3,3,5,5,6,7].\r\n\r\nNote: \r\nYou may assume k is always valid, ie: 1 \u2264 k \u2264 input array's size for non-empty array.\r\n\r\nFollow up:\r\nCould you solve it in linear time?\r\n\r\n\r\n  How about using a data structure such as deque (double-ended queue)?\r\n  The queue size need not be the same as the window\u2019s size.\r\n  Remove redundant elements and the queue should store only elements that need to be considered.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Heap"
+        ], 
+        "name": "Sliding Window Maximum", 
+        "similar_problems": [
+            "(H) Minimum Window Substring", 
+            " (E) Min Stack", 
+            " (H) Longest Substring with At Most Two Distinct Characters", 
+            " (H) Paint House II"
+        ], 
+        "total": "152417"
+    }, 
+    {
+        "accepted": "157056", 
+        "companies": "Amazon", 
+        "description": "Say you have an array for which the ith element is the price of a given stock on day i.\r\n\r\nIf you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.\r\n\r\nExample 1:\r\n\r\nInput: [7, 1, 5, 3, 6, 4]\r\nOutput: 5\r\n\r\nmax. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: [7, 6, 4, 3, 1]\r\nOutput: 0\r\n\r\nIn this case, no transaction is done, i.e. max profit = 0.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Array", 
+            "Dynamic Programming"
+        ], 
+        "name": "Best Time to Buy and Sell Stock", 
+        "similar_problems": [
+            "(M) Maximum Subarray", 
+            " (M) Best Time to Buy and Sell Stock II", 
+            " (H) Best Time to Buy and Sell Stock III", 
+            " (H) Best Time to Buy and Sell Stock IV", 
+            " (M) Best Time to Buy and Sell Stock with Cooldown"
+        ], 
+        "total": "401347"
+    }, 
+    {
+        "accepted": "121135", 
+        "companies": "Amazon", 
+        "description": "Given a digit string, return all possible letter combinations that the number could represent.\r\n\r\n\r\n\r\nA mapping of digit to letters (just like on the telephone buttons) is given below.\r\n\r\n\r\n\r\nInput:Digit string \"23\"\r\nOutput: [\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"].\r\n\r\n\r\n\r\nNote:\r\nAlthough the above answer is in lexicographical order, your answer could be in any order you want.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Backtracking", 
+            "String"
+        ], 
+        "name": "Letter Combinations of a Phone Number", 
+        "similar_problems": [
+            "(M) Generate Parentheses", 
+            " (M) Combination Sum", 
+            " (E) Binary Watch"
+        ], 
+        "total": "373608"
+    }, 
+    {
+        "accepted": "93719", 
+        "companies": "Amazon", 
+        "description": "You are given an n x n 2D matrix representing an image.\r\nRotate the image by 90 degrees (clockwise).\r\nFollow up:\r\nCould you do this in-place?", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Rotate Image", 
+        "similar_problems": [], 
+        "total": "252409"
+    }, 
+    {
+        "accepted": "164441", 
+        "companies": "Amazon", 
+        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.\r\n\r\nExample:\r\n\r\nInput: \"babad\"\r\n\r\nOutput: \"bab\"\r\n\r\nNote: \"aba\" is also a valid answer.\r\n\r\n\r\n\r\nExample:\r\n\r\nInput: \"cbbd\"\r\n\r\nOutput: \"bb\"", 
+        "difficulty": "Medium", 
+        "hints": [
+            "String"
+        ], 
+        "name": "Longest Palindromic Substring", 
+        "similar_problems": [
+            "(H) Shortest Palindrome", 
+            " (E) Palindrome Permutation", 
+            " (H) Palindrome Pairs"
+        ], 
+        "total": "669430"
+    }, 
+    {
+        "accepted": "62250", 
+        "companies": "Amazon", 
+        "description": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:\r\n\r\n\r\n\r\nIntegers in each row are sorted in ascending from left to right.\r\nIntegers in each column are sorted in ascending from top to bottom.\r\n\r\n\r\n\r\n\r\nFor example,\r\n\r\nConsider the following matrix:\r\n\r\n\r\n[\r\n  [1,   4,  7, 11, 15],\r\n  [2,   5,  8, 12, 19],\r\n  [3,   6,  9, 16, 22],\r\n  [10, 13, 14, 17, 24],\r\n  [18, 21, 23, 26, 30]\r\n]\r\n\r\n\r\nGiven target = 5, return true.\r\nGiven target = 20, return false.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Binary Search", 
+            "Divide and Conquer"
+        ], 
+        "name": "Search a 2D Matrix II", 
+        "similar_problems": [
+            "(M) Search a 2D Matrix"
+        ], 
+        "total": "164061"
+    }, 
+    {
+        "accepted": "180213", 
+        "companies": "Amazon", 
+        "description": "Reverse a singly linked list.\r\n\r\nclick to show more hints.\r\n\r\nHint:\r\nA linked list can be reversed either iteratively or recursively. Could you implement both?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List"
+        ], 
+        "name": "Reverse Linked List", 
+        "similar_problems": [
+            "(M) Reverse Linked List II", 
+            " (M) Binary Tree Upside Down", 
+            " (E) Palindrome Linked List"
+        ], 
+        "total": "414168"
+    }, 
+    {
+        "accepted": "113945", 
+        "companies": "Amazon", 
+        "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.\r\n\r\n\r\n\r\nAccording to the definition of LCA on Wikipedia: \u201cThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).\u201d\r\n\r\n\r\n\r\n        _______6______\r\n       /              \\\r\n    ___2__          ___8__\r\n   /      \\        /      \\\r\n   0      _4       7       9\r\n         /  \\\r\n         3   5\r\n\r\n\r\n\r\nFor example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Lowest Common Ancestor of a Binary Search Tree", 
+        "similar_problems": [
+            "(M) Lowest Common Ancestor of a Binary Tree"
+        ], 
+        "total": "299104"
+    }, 
+    {
+        "accepted": "95753", 
+        "companies": "Amazon", 
+        "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining. \r\n\r\n\r\n\r\nFor example, \r\nGiven [0,1,0,2,1,0,1,3,2,1,2,1], return 6.\r\n\r\n\r\n\r\n\r\nThe above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Stack", 
+            "Two Pointers"
+        ], 
+        "name": "Trapping Rain Water", 
+        "similar_problems": [
+            "(M) Container With Most Water", 
+            " (M) Product of Array Except Self", 
+            " (H) Trapping Rain Water II"
+        ], 
+        "total": "271169"
+    }, 
+    {
+        "accepted": "107442", 
+        "companies": "Amazon", 
+        "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.\r\n\r\n\r\npush(x) -- Push element x onto stack.\r\n\r\n\r\npop() -- Removes the element on top of the stack.\r\n\r\n\r\ntop() -- Get the top element.\r\n\r\n\r\ngetMin() -- Retrieve the minimum element in the stack.\r\n\r\n\r\n\r\n\r\nExample:\r\n\r\nMinStack minStack = new MinStack();\r\nminStack.push(-2);\r\nminStack.push(0);\r\nminStack.push(-3);\r\nminStack.getMin();   --> Returns -3.\r\nminStack.pop();\r\nminStack.top();      --> Returns 0.\r\nminStack.getMin();   --> Returns -2.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Stack", 
+            "Design"
+        ], 
+        "name": "Min Stack", 
+        "similar_problems": [
+            "(H) Sliding Window Maximum"
+        ], 
+        "total": "408383"
+    }, 
+    {
+        "accepted": "4435", 
+        "companies": "Amazon", 
+        "description": "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. \r\n\r\nDesign an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure.\r\n\r\n\r\nThe encoded string should be as compact as possible.\r\n\r\n\r\n\r\nNote: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Serialize and Deserialize BST", 
+        "similar_problems": [
+            "(H) Serialize and Deserialize Binary Tree"
+        ], 
+        "total": "10436"
+    }, 
+    {
+        "accepted": "151835", 
+        "companies": "Amazon", 
+        "description": "Given a linked list, determine if it has a cycle in it.\r\n\r\n\r\n\r\nFollow up:\r\nCan you solve it without using extra space?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List", 
+            "Two Pointers"
+        ], 
+        "name": "Linked List Cycle", 
+        "similar_problems": [
+            "(M) Linked List Cycle II"
+        ], 
+        "total": "423902"
+    }, 
+    {
+        "accepted": "131023", 
+        "companies": "Amazon", 
+        "description": "Given two strings s and t, write a function to determine if t is an anagram of s. \r\n\r\nFor example,\r\ns = \"anagram\", t = \"nagaram\", return true.\r\ns = \"rat\", t = \"car\", return false.\r\n\r\n\r\nNote:\r\nYou may assume the string contains only lowercase alphabets.\r\n\r\nFollow up:\r\nWhat if the inputs contain unicode characters? How would you adapt your solution to such case?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Hash Table", 
+            "Sort"
+        ], 
+        "name": "Valid Anagram", 
+        "similar_problems": [
+            "(M) Group Anagrams", 
+            " (E) Palindrome Permutation", 
+            " (E) Find All Anagrams in a String"
+        ], 
+        "total": "291948"
+    }, 
+    {
+        "accepted": "102660", 
+        "companies": "Amazon", 
+        "description": "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.\r\n\r\nFor example,\r\nGiven [3,2,1,5,6,4] and k = 2, return 5.\r\n\r\n\r\nNote: \r\nYou may assume k is always valid, 1 \u2264 k \u2264 array's length.\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Heap", 
+            "Divide and Conquer"
+        ], 
+        "name": "Kth Largest Element in an Array", 
+        "similar_problems": [
+            "(M) Wiggle Sort II", 
+            " (M) Top K Frequent Elements", 
+            " (E) Third Maximum Number"
+        ], 
+        "total": "273877"
+    }, 
+    {
+        "accepted": "107792", 
+        "companies": "Amazon", 
+        "description": "Write a program to find the node at which the intersection of two singly linked lists begins.\r\n\r\nFor example, the following two linked lists: \r\n\r\nA:          a1 \u2192 a2\r\n                   \u2198\r\n                     c1 \u2192 c2 \u2192 c3\r\n                   \u2197            \r\nB:     b1 \u2192 b2 \u2192 b3\r\n\r\nbegin to intersect at node c1.\r\n\r\nNotes:\r\n\r\nIf the two linked lists have no intersection at all, return null.\r\nThe linked lists must retain their original structure after the function returns. \r\nYou may assume there are no cycles anywhere in the entire linked structure.\r\nYour code should preferably run in O(n) time and use only O(1) memory.\r\n\r\n\r\n\r\nCredits:Special thanks to @stellari for adding this problem and creating all test cases.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List"
+        ], 
+        "name": "Intersection of Two Linked Lists", 
+        "similar_problems": [], 
+        "total": "358873"
+    }, 
+    {
+        "accepted": "231264", 
+        "companies": "Amazon", 
+        "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.\r\n\r\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\r\n\r\n\r\nInput: (2 -> 4 -> 3) + (5 -> 6 -> 4)\r\nOutput: 7 -> 0 -> 8", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Linked List", 
+            "Math"
+        ], 
+        "name": "Add Two Numbers", 
+        "similar_problems": [
+            "(M) Multiply Strings", 
+            " (E) Add Binary", 
+            " (E) Sum of Two Integers", 
+            " (E) Add Strings", 
+            " (M) Add Two Numbers II"
+        ], 
+        "total": "879799"
+    }, 
+    {
+        "accepted": "123288", 
+        "companies": "Amazon", 
+        "description": "Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words.\r\n\r\n\r\nFor example, given\r\ns = \"leetcode\",\r\ndict = [\"leet\", \"code\"].\r\n\r\n\r\n\r\nReturn true because \"leetcode\" can be segmented as \"leet code\".\r\n\r\n\r\n\r\nUPDATE (2017/1/4):\r\nThe wordDict parameter had been changed to a list of strings (instead of a set of strings). Please reload the code definition to get the latest changes.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Dynamic Programming"
+        ], 
+        "name": "Word Break", 
+        "similar_problems": [
+            "(H) Word Break II"
+        ], 
+        "total": "436372"
+    }, 
+    {
+        "accepted": "110605", 
+        "companies": "Amazon", 
+        "description": "Given an array of strings, group anagrams together.\r\n\r\n\r\nFor example, given: [\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"], \r\nReturn:\r\n\r\n[\r\n  [\"ate\", \"eat\",\"tea\"],\r\n  [\"nat\",\"tan\"],\r\n  [\"bat\"]\r\n]\r\n\r\nNote: All inputs will be in lower-case.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "String"
+        ], 
+        "name": "Group Anagrams", 
+        "similar_problems": [
+            "(E) Valid Anagram", 
+            " (E) Group Shifted Strings"
+        ], 
+        "total": "346911"
+    }, 
+    {
+        "accepted": "59689", 
+        "companies": "Amazon", 
+        "description": "Given two words (beginWord and endWord), and a dictionary's word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:\r\n\r\n\r\nOnly one letter can be changed at a time\r\nEach intermediate word must exist in the word list\r\n\r\n\r\n\r\nFor example,\r\n\r\n\r\nGiven:\r\nbeginWord = \"hit\"\r\nendWord = \"cog\"\r\nwordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\r\n\r\n\r\nReturn\r\n\r\n  [\r\n    [\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],\r\n    [\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]\r\n  ]\r\n\r\n\r\n\r\n\r\nNote:\r\n\r\nAll words have the same length.\r\nAll words contain only lowercase alphabetic characters.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Backtracking", 
+            "Breadth-first Search", 
+            "String"
+        ], 
+        "name": "Word Ladder II", 
+        "similar_problems": [], 
+        "total": "438382"
+    }, 
+    {
+        "accepted": "82620", 
+        "companies": "Amazon", 
+        "description": "Given a singly linked list, determine if it is a palindrome.\r\n\r\nFollow up:\r\nCould you do it in O(n) time and O(1) space?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List", 
+            "Two Pointers"
+        ], 
+        "name": "Palindrome Linked List", 
+        "similar_problems": [
+            "(E) Palindrome Number", 
+            " (E) Valid Palindrome", 
+            " (E) Reverse Linked List"
+        ], 
+        "total": "261222"
+    }, 
+    {
+        "accepted": "134741", 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, determine if it is a valid binary search tree (BST).\r\n\r\n\r\n\r\nAssume a BST is defined as follows:\r\n\r\nThe left subtree of a node contains only nodes with keys less than the node's key.\r\nThe right subtree of a node contains only nodes with keys greater than the node's key.\r\nBoth the left and right subtrees must also be binary search trees.\r\n\r\n\r\n\r\nExample 1:\r\n\r\n    2\r\n   / \\\r\n  1   3\r\n\r\nBinary tree [2,1,3], return true.\r\n\r\n\r\nExample 2:\r\n\r\n    1\r\n   / \\\r\n  2   3\r\n\r\nBinary tree [1,2,3], return false.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree", 
+            "Depth-first Search"
+        ], 
+        "name": "Validate Binary Search Tree", 
+        "similar_problems": [
+            "(M) Binary Tree Inorder Traversal"
+        ], 
+        "total": "602890"
+    }, 
+    {
+        "accepted": "46305", 
+        "companies": "Amazon", 
+        "description": "Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.\r\n\r\nThe function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.\r\n\r\nYou may assume that each input would have exactly one solution.\r\n\r\n\r\nInput: numbers={2, 7, 11, 15}, target=9\r\nOutput: index1=1, index2=2", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array", 
+            "Two Pointers", 
+            "Binary Search"
+        ], 
+        "name": "Two Sum II - Input array is sorted", 
+        "similar_problems": [
+            "(E) Two Sum"
+        ], 
+        "total": "96007"
+    }, 
+    {
+        "accepted": "235395", 
+        "companies": "Amazon", 
+        "description": "Given a string, find the length of the longest substring without repeating characters.\r\n\r\nExamples:\r\n\r\nGiven \"abcabcbb\", the answer is \"abc\", which the length is 3.\r\n\r\nGiven \"bbbbb\", the answer is \"b\", with the length of 1.\r\n\r\nGiven \"pwwkew\", the answer is \"wke\", with the length of 3. Note that the answer must be a substring, \"pwke\" is a subsequence and not a substring.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "Two Pointers", 
+            "String"
+        ], 
+        "name": "Longest Substring Without Repeating Characters", 
+        "similar_problems": [
+            "(H) Longest Substring with At Most Two Distinct Characters"
+        ], 
+        "total": "993442"
+    }, 
+    {
+        "accepted": "124553", 
+        "companies": "Amazon", 
+        "description": "Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Divide and Conquer", 
+            "Linked List", 
+            "Heap"
+        ], 
+        "name": "Merge k Sorted Lists", 
+        "similar_problems": [
+            "(E) Merge Two Sorted Lists", 
+            " (M) Ugly Number II"
+        ], 
+        "total": "480092"
+    }, 
+    {
+        "accepted": "184137", 
+        "companies": "Amazon", 
+        "description": "Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List"
+        ], 
+        "name": "Merge Two Sorted Lists", 
+        "similar_problems": [
+            "(H) Merge k Sorted Lists", 
+            " (E) Merge Sorted Array", 
+            " (M) Sort List", 
+            " (M) Shortest Word Distance II"
+        ], 
+        "total": "485114"
+    }, 
+    {
+        "accepted": "174898", 
+        "companies": "Amazon", 
+        "description": "Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.\r\n\r\nNote: The solution set must not contain duplicate triplets.\r\n\r\n\r\nFor example, given array S = [-1, 0, 1, 2, -1, -4],\r\n\r\nA solution set is:\r\n[\r\n  [-1, 0, 1],\r\n  [-1, -1, 2]\r\n]", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array", 
+            "Two Pointers"
+        ], 
+        "name": "3Sum", 
+        "similar_problems": [
+            "(E) Two Sum", 
+            " (M) 3Sum Closest", 
+            " (M) 4Sum", 
+            " (M) 3Sum Smaller"
+        ], 
+        "total": "836527"
+    }, 
+    {
+        "accepted": "136082", 
+        "companies": "Amazon", 
+        "description": "Given a set of distinct integers, nums, return all possible subsets.\r\n\r\nNote: The solution set must not contain duplicate subsets.\r\n\r\n\r\nFor example,\r\nIf nums = [1,2,3], a solution is:\r\n\r\n\r\n\r\n[\r\n  [3],\r\n  [1],\r\n  [2],\r\n  [1,2,3],\r\n  [1,3],\r\n  [2,3],\r\n  [1,2],\r\n  []\r\n]", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array", 
+            "Backtracking", 
+            "Bit Manipulation"
+        ], 
+        "name": "Subsets", 
+        "similar_problems": [
+            "(M) Generalized Abbreviation"
+        ], 
+        "total": "370554"
+    }, 
+    {
+        "accepted": "146974", 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).\r\n\r\n\r\nFor example:\r\nGiven binary tree [3,9,20,null,null,15,7],\r\n\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n\r\n\r\n\r\nreturn its level order traversal as:\r\n\r\n[\r\n  [3],\r\n  [9,20],\r\n  [15,7]\r\n]", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Tree", 
+            "Breadth-first Search"
+        ], 
+        "name": "Binary Tree Level Order Traversal", 
+        "similar_problems": [
+            "(M) Binary Tree Zigzag Level Order Traversal", 
+            " (E) Binary Tree Level Order Traversal II", 
+            " (E) Minimum Depth of Binary Tree", 
+            " (M) Binary Tree Vertical Order Traversal"
+        ], 
+        "total": "396795"
+    }, 
+    {
+        "accepted": "88724", 
+        "companies": "Amazon", 
+        "description": "Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.\r\n\r\n\r\nclick to show follow up.\r\n\r\nFollow up:\r\n\r\n\r\nDid you use extra space?\r\nA straight forward solution using O(mn) space is probably a bad idea.\r\nA simple improvement uses O(m + n) space, but still not the best solution.\r\nCould you devise a constant space solution?", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Set Matrix Zeroes", 
+        "similar_problems": [
+            "(M) Game of Life"
+        ], 
+        "total": "252467"
+    }, 
+    {
+        "accepted": "78792", 
+        "companies": "Amazon", 
+        "description": "The gray code is a binary numeral system where two successive values differ in only one bit.\r\n\r\nGiven a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.\r\n\r\nFor example, given n = 2, return [0,1,3,2]. Its gray code sequence is:\r\n\r\n00 - 0\r\n01 - 1\r\n11 - 3\r\n10 - 2\r\n\r\n\r\nNote:\r\nFor a given n, a gray code sequence is not uniquely defined.\r\n\r\nFor example, [0,2,3,1] is also a valid gray code sequence according to the above definition.\r\n\r\nFor now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Backtracking"
+        ], 
+        "name": "Gray Code", 
+        "similar_problems": [], 
+        "total": "200183"
+    }, 
+    {
+        "accepted": "12705", 
+        "companies": "Amazon", 
+        "description": "Design a simplified version of Twitter where users can post tweets, follow/unfollow another user and is able to see the 10 most recent tweets in the user's news feed. Your design should support the following methods:\r\n\r\n\r\n\r\npostTweet(userId, tweetId): Compose a new tweet.\r\ngetNewsFeed(userId): Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.\r\nfollow(followerId, followeeId): Follower follows a followee.\r\nunfollow(followerId, followeeId): Follower unfollows a followee.\r\n\r\n\r\n\r\nExample:\r\n\r\nTwitter twitter = new Twitter();\r\n\r\n// User 1 posts a new tweet (id = 5).\r\ntwitter.postTweet(1, 5);\r\n\r\n// User 1's news feed should return a list with 1 tweet id -> [5].\r\ntwitter.getNewsFeed(1);\r\n\r\n// User 1 follows user 2.\r\ntwitter.follow(1, 2);\r\n\r\n// User 2 posts a new tweet (id = 6).\r\ntwitter.postTweet(2, 6);\r\n\r\n// User 1's news feed should return a list with 2 tweet ids -> [6, 5].\r\n// Tweet id 6 should precede tweet id 5 because it is posted after tweet id 5.\r\ntwitter.getNewsFeed(1);\r\n\r\n// User 1 unfollows user 2.\r\ntwitter.unfollow(1, 2);\r\n\r\n// User 1's news feed should return a list with 1 tweet id -> [5],\r\n// since user 1 is no longer following user 2.\r\ntwitter.getNewsFeed(1);", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "Heap", 
+            "Design"
+        ], 
+        "name": "Design Twitter", 
+        "similar_problems": [], 
+        "total": "51843"
+    }, 
+    {
+        "accepted": "96357", 
+        "companies": "Amazon", 
+        "description": "Description:\r\nCount the number of prime numbers less than a non-negative number, n.\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.\r\n\r\n\r\n  Let's start with a isPrime function. To determine if a number is prime, we need to check if it is not divisible by any number less than n. The runtime complexity of isPrime function would be O(n) and hence counting the total prime numbers up to n would be O(n2). Could we do better?\r\n  \r\n  As we know the number must not be divisible by any number > n / 2, we can immediately cut the total iterations half by dividing only up to n / 2. Could we still do better?\r\n  \r\n  Let's write down all of 12's factors:\r\n\r\n2 \u00d7 6 = 12\r\n3 \u00d7 4 = 12\r\n4 \u00d7 3 = 12\r\n6 \u00d7 2 = 12\r\n\r\n\r\nAs you can see, calculations of 4 \u00d7 3 and 6 \u00d7 2 are not necessary. Therefore, we only need to consider factors up to &radic;n because, if n is divisible by some number p, then n = p \u00d7 q and since p &le; q, we could derive that p &le; &radic;n.\r\n\r\nOur total runtime has now improved to O(n1.5), which is slightly better. Is there a faster approach?\r\n\r\n\r\npublic int countPrimes(int n) {\r\n   int count = 0;\r\n   for (int i = 1; i < n; i++) {\r\n      if (isPrime(i)) count++;\r\n   }\r\n   return count;\r\n}\r\n\r\nprivate boolean isPrime(int num) {\r\n   if (num <= 1) return false;\r\n   // Loop's ending condition is i * i <= num instead of i <= sqrt(num)\r\n   // to avoid repeatedly calling an expensive function sqrt().\r\n   for (int i = 2; i * i <= num; i++) {\r\n      if (num % i == 0) return false;\r\n   }\r\n   return true;\r\n}\r\n\r\n  \r\n  The Sieve of Eratosthenes is one of the most efficient ways to find all prime numbers up to n. But don't let that name scare you, I promise that the concept is surprisingly simple.\r\n\r\n\r\n\r\nSieve of Eratosthenes: algorithm steps for primes below 121. \"Sieve of Eratosthenes Animation\" by SKopp is licensed under CC BY 2.0.\r\n\r\n\r\nWe start off with a table of n numbers. Let's look at the first number, 2. We know all multiples of 2 must not be primes, so we mark them off as non-primes. Then we look at the next number, 3. Similarly, all multiples of 3 such as 3 \u00d7 2 = 6, 3 \u00d7 3 = 9, ... must not be primes, so we mark them off as well. Now we look at the next number, 4, which was already marked off. What does this tell you? Should you mark off all multiples of 4 as well?\r\n  \r\n  4 is not a prime because it is divisible by 2, which means all multiples of 4 must also be divisible by 2 and were already marked off. So we can skip 4 immediately and go to the next number, 5. Now, all multiples of 5 such as 5 \u00d7 2 = 10, 5 \u00d7 3 = 15, 5 \u00d7 4 = 20, 5 \u00d7 5 = 25, ... can be marked off. There is a slight optimization here, we do not need to start from 5 \u00d7 2 = 10. Where should we start marking off?\r\n  \r\n  In fact, we can mark off multiples of 5 starting at 5 \u00d7 5 = 25, because 5 \u00d7 2 = 10 was already marked off by multiple of 2, similarly 5 \u00d7 3 = 15 was already marked off by multiple of 3. Therefore, if the current number is p, we can always mark off multiples of p starting at p2, then in increments of p: p2 + p, p2 + 2p, ... Now what should be the terminating loop condition?\r\n  \r\n  It is easy to say that the terminating loop condition is p < n, which is certainly correct but not efficient. Do you still remember Hint #3?\r\n  \r\n  Yes, the terminating loop condition can be p < &radic;n, as all non-primes &ge; &radic;n must have already been marked off. When the loop terminates, all the numbers in the table that are non-marked are prime.\r\n\r\nThe Sieve of Eratosthenes uses an extra O(n) memory and its runtime complexity is O(n log log n). For the more mathematically inclined readers, you can read more about its algorithm complexity on Wikipedia.\r\n\r\n\r\npublic int countPrimes(int n) {\r\n   boolean[] isPrime = new boolean[n];\r\n   for (int i = 2; i < n; i++) {\r\n      isPrime[i] = true;\r\n   }\r\n   // Loop's ending condition is i * i < n instead of i < sqrt(n)\r\n   // to avoid repeatedly calling an expensive function sqrt().\r\n   for (int i = 2; i * i < n; i++) {\r\n      if (!isPrime[i]) continue;\r\n      for (int j = i * i; j < n; j += i) {\r\n         isPrime[j] = false;\r\n      }\r\n   }\r\n   int count = 0;\r\n   for (int i = 2; i < n; i++) {\r\n      if (isPrime[i]) count++;\r\n   }\r\n   return count;\r\n}", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Hash Table", 
+            "Math"
+        ], 
+        "name": "Count Primes", 
+        "similar_problems": [
+            "(E) Ugly Number", 
+            " (M) Ugly Number II", 
+            " (M) Perfect Squares"
+        ], 
+        "total": "368548"
+    }, 
+    {
+        "accepted": "17144", 
+        "companies": "Amazon", 
+        "description": "Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).\r\n\r\nExample 1:\r\n\r\nInput: [3, 2, 1]\r\n\r\nOutput: 1\r\n\r\nExplanation: The third maximum is 1.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: [1, 2]\r\n\r\nOutput: 2\r\n\r\nExplanation: The third maximum does not exist, so the maximum (2) is returned instead.\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput: [2, 2, 3, 1]\r\n\r\nOutput: 1\r\n\r\nExplanation: Note that the third maximum here means the third maximum distinct number.\r\nBoth numbers with value 2 are both considered as second maximum.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Third Maximum Number", 
+        "similar_problems": [
+            "(M) Kth Largest Element in an Array"
+        ], 
+        "total": "64057"
+    }, 
+    {
+        "accepted": "145193", 
+        "companies": "Amazon", 
+        "description": "Implement atoi to convert a string to an integer.\r\n\r\nHint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.\r\n\r\n\r\nNotes: \r\nIt is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front. \r\n\r\n\r\nUpdate (2015-02-10):\r\nThe signature of the C++ function had been updated. If you still see your function signature accepts a const char * argument, please click the reload button  to reset your code definition.\r\n\r\n\r\nspoilers alert... click to show requirements for atoi.\r\n\r\nRequirements for atoi:\r\n\r\nThe function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.\r\n\r\nThe string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.\r\n\r\nIf the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.\r\n\r\nIf no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Math", 
+            "String"
+        ], 
+        "name": "String to Integer (atoi)", 
+        "similar_problems": [
+            "(E) Reverse Integer", 
+            " (H) Valid Number"
+        ], 
+        "total": "1051040"
+    }, 
+    {
+        "accepted": "66077", 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.\r\n\r\n\r\nFor example:\r\nGiven the following binary tree,\r\n\r\n   1            <---\r\n /   \\\r\n2     3         <---\r\n \\     \\\r\n  5     4       <---\r\n\r\n\r\n\r\nYou should return [1, 3, 4].\r\n\r\n\r\nCredits:Special thanks to @amrsaqr for adding this problem and creating all test cases.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree", 
+            "                    ", 
+            "                    Depth-first Search", 
+            "                    ", 
+            "                    Breadth-first Search"
+        ], 
+        "name": "Binary Tree Right Side View", 
+        "similar_problems": [
+            "(M) Populating Next Right Pointers in Each Node"
+        ], 
+        "total": "170661"
+    }, 
+    {
+        "accepted": "100462", 
+        "companies": "Amazon", 
+        "description": "Given an index k, return the kth row of the Pascal's triangle.\r\n\r\n\r\nFor example, given k = 3,\r\nReturn [1,3,3,1].\r\n\r\n\r\n\r\nNote:\r\nCould you optimize your algorithm to use only O(k) extra space?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Pascal's Triangle II", 
+        "similar_problems": [
+            "(E) Pascal's Triangle"
+        ], 
+        "total": "286712"
+    }, 
+    {
+        "accepted": "13738", 
+        "companies": "Amazon", 
+        "description": "Given a string, sort it in decreasing order based on the frequency of characters.\r\n\r\nExample 1:\r\n\r\nInput:\r\n\"tree\"\r\n\r\nOutput:\r\n\"eert\"\r\n\r\nExplanation:\r\n'e' appears twice while 'r' and 't' both appear once.\r\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput:\r\n\"cccaaa\"\r\n\r\nOutput:\r\n\"cccaaa\"\r\n\r\nExplanation:\r\nBoth 'c' and 'a' appear three times, so \"aaaccc\" is also a valid answer.\r\nNote that \"cacaca\" is incorrect, as the same characters must be together.\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput:\r\n\"Aabb\"\r\n\r\nOutput:\r\n\"bbAa\"\r\n\r\nExplanation:\r\n\"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\r\nNote that 'A' and 'a' are treated as two different characters.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "Heap"
+        ], 
+        "name": "Sort Characters By Frequency", 
+        "similar_problems": [
+            "(M) Top K Frequent Elements"
+        ], 
+        "total": "27056"
+    }, 
+    {
+        "accepted": "14298", 
+        "companies": "Amazon", 
+        "description": "Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.  You may assume the given string consists of lowercase English letters only and its length  will not exceed 10000. \r\n\r\nExample 1:\r\n\r\nInput: \"abab\"\r\n\r\nOutput: True\r\n\r\nExplanation: It's the substring \"ab\" twice.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: \"aba\"\r\n\r\nOutput: False\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput: \"abcabcabcabc\"\r\n\r\nOutput: True\r\n\r\nExplanation: It's the substring \"abc\" four times. (And the substring \"abcabc\" twice.)", 
+        "difficulty": "Easy", 
+        "hints": [
+            "String"
+        ], 
+        "name": "Repeated Substring Pattern", 
+        "similar_problems": [
+            "(E) Implement strStr()"
+        ], 
+        "total": "36143"
+    }, 
+    {
+        "accepted": "13982", 
+        "companies": "Amazon", 
+        "description": "Given an array of integers A and let n to be its length.\r\n\r\n\r\n\r\nAssume Bk to be an array obtained by rotating the array A k positions clock-wise, we define a \"rotation function\" F on A as follow:\r\n\r\n\r\n\r\nF(k) = 0 * Bk[0] + 1 * Bk[1] + ... + (n-1) * Bk[n-1].\r\n\r\nCalculate the maximum value of F(0), F(1), ..., F(n-1). \r\n\r\n\r\nNote:\r\nn is guaranteed to be less than 105.\r\n\r\n\r\nExample:\r\n\r\nA = [4, 3, 2, 6]\r\n\r\nF(0) = (0 * 4) + (1 * 3) + (2 * 2) + (3 * 6) = 0 + 3 + 4 + 18 = 25\r\nF(1) = (0 * 6) + (1 * 4) + (2 * 3) + (3 * 2) = 0 + 4 + 6 + 6 = 16\r\nF(2) = (0 * 2) + (1 * 6) + (2 * 4) + (3 * 3) = 0 + 6 + 8 + 9 = 23\r\nF(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26\r\n\r\nSo the maximum value of F(0), F(1), F(2), F(3) is F(3) = 26.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Math"
+        ], 
+        "name": "Rotate Function", 
+        "similar_problems": [], 
+        "total": "45945"
+    }
+]
