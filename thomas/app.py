@@ -80,8 +80,11 @@ def question_type_difficulty(Diff):
 
 	session.attributes['company'] = q 
 	#start_timer(20)
+	print("++++++++++++++++")
+	print(q['name'])
+	print("++++++++++++++++")
 
-	return question(q['description'] + 'Would you like me to repeat the question?')
+	return question(q['description'] + 'Would you like me to repeat the question or give an example?')
 
 @ask.intent('QuestionExample')
 def example_for_question():

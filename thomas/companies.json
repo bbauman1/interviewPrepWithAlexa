@@ -548,7 +548,7 @@
     {
         "accepted": 100463, 
         "companies": "Amazon", 
-        "description": "Given an index k, return the kth row of the Pascal's triangle.", 
+        "description": "Given an index k, return the k th row of the Pascal's triangle.", 
         "difficulty": "Easy", 
         "hints": [
             "Array"
