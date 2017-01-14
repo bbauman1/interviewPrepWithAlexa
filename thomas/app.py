@@ -22,43 +22,43 @@ def get_difficulty(diff):
 	real_q = questions[randint(0, len(questions) - 1)]
 	return real_q
 
-def start_time(minutes, questionTitle):
-	seconds = minutes*60
-	CHUNK = 1024
-	FORMAT = pyaudio.paInt16
-	CHANNELS = 2
-	RATE = 44100
-	RECORD_SECONDS = seconds
-	WAVE_OUTPUT_FILENAME = questionTitle+".wav"
+# def start_time(minutes, questionTitle):
+# 	seconds = minutes*60
+# 	CHUNK = 1024
+# 	FORMAT = pyaudio.paInt16
+# 	CHANNELS = 2
+# 	RATE = 44100
+# 	RECORD_SECONDS = seconds
+# 	WAVE_OUTPUT_FILENAME = questionTitle+".wav"
 	
-	p = pyaudio.PyAudio()
+# 	p = pyaudio.PyAudio()
 	
-	stream = p.open(format=FORMAT,
-	                channels=CHANNELS,
-	                rate=RATE,
-	                input=True,
-	                frames_per_buffer=CHUNK)
+# 	stream = p.open(format=FORMAT,
+# 	                channels=CHANNELS,
+# 	                rate=RATE,
+# 	                input=True,
+# 	                frames_per_buffer=CHUNK)
 	
-	print("* recording")
+# 	print("* recording")
 	
-	frames = []
+# 	frames = []
 	
-	for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
-	    data = stream.read(CHUNK)
-	    frames.append(data)
+# 	for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+# 	    data = stream.read(CHUNK)
+# 	    frames.append(data)
 	
-	print("* done recording")
+# 	print("* done recording")
 	
-	stream.stop_stream()
-	stream.close()
-	p.terminate()
+# 	stream.stop_stream()
+# 	stream.close()
+# 	p.terminate()
 	
-	wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-	wf.setnchannels(CHANNELS)
-	wf.setsampwidth(p.get_sample_size(FORMAT))
-	wf.setframerate(RATE)
-	wf.writeframes(b''.join(frames))
-	wf.close()
+# 	wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+# 	wf.setnchannels(CHANNELS)
+# 	wf.setsampwidth(p.get_sample_size(FORMAT))
+# 	wf.setframerate(RATE)
+# 	wf.writeframes(b''.join(frames))
+# 	wf.close()
 
 
 
@@ -79,9 +79,13 @@ def question_type_difficulty(Diff):
 	q = get_difficulty(norm_difficulty)
 
 	session.attributes['company'] = q 
-	start_timer(20)
+	session.attributes['difficulty'] = norm_difficulty
+	#start_timer(20)
+	print("++++++++++++++++")
+	print(q['name'])
+	print("++++++++++++++++")
 
-	return question(q['description'] + 'Would you like me to repeat the question?')
+	return question(q['description'] + ' Would you like me to repeat the question or give an example?')
 
 @ask.intent('QuestionExample')
 def example_for_question():
@@ -92,15 +96,32 @@ def example_for_question():
 	if 'example' not in q:
 		return question('No example available. Would you like me to repeat the question?')
 	
-	return question(q['example']+'. Would you like to repeat the example or question?')
+	return question(q['example']+', Would you like to repeat the example or question?')
 
 @ask.intent('YesRepeat')
 def repeat_question():
-	return question(session.attributes['company']['description'] + 'Would you like me to repeat the question or give a an example?')
+	return question(session.attributes['company']['description'] + ' Would you like me to repeat the question or give a an example?')
 
 @ask.intent('NoRepeat')
 def repeat_question():
-	return statement('Good luck! When you are done plug in your answer into leetcode! papa bless')
+	if 'company' not in session.attributes:
+		return statement('Thanks for coding with us!')
+	return statement('Good luck! When you are done plug in your answer into question number {} on leetcode! papa bless'.format(session.attributes['company']['id']))
+
+@ask.intent('Stop')
+def stop_question():
+	return statement('Thanks for coding with us!')
+
+@ask.intent('AnotherQuestion')
+def ask_another_question():
+	if 'company' not in session.attributes:
+		return question('Question not asked yet. Do you want an easy, medium, or hard coding question?')
+	if 'difficulty' not in session.attributes:
+		return question('Difficulty not set. Do you want an easy, medium, or hard coding question?')
+	norm_difficulty = session.attributes['difficulty']
+	q = get_difficulty(norm_difficulty)
+	session.attributes['company'] = q 
+	return question(q['description']+' Would you like me to repeat the question or give an example?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():

@@ -26,6 +26,15 @@
     },
     {
       "intent": "NoRepeat"
+    },
+    {
+      "intent": "QuestionExample"
+    },
+    {
+      "intent": "Stop"
+    },
+    {
+      "intent": "AnotherQuestion"
     }
   ]
 }
