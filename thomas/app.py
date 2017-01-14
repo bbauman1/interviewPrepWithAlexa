@@ -83,13 +83,24 @@ def question_type_difficulty(Diff):
 
 	return question(q['description'] + 'Would you like me to repeat the question?')
 
+@ask.intent('QuestionExample')
+def example_for_question():
+	if 'company' not in session.attributes:
+		return question('Question not found please ask for another')
+	q = session.attributes['company']
+
+	if 'example' not in q:
+		return question('No example available. Would you like me to repeat the question?')
+	
+	return question(q['example']+'. Would you like to repeat the example or question?')
+
 @ask.intent('YesRepeat')
 def repeat_question():
-	return question(session.attributes['company']['description'] + 'Would you like me to repeat the question?')
+	return question(session.attributes['company']['description'] + 'Would you like me to repeat the question or give a an example?')
 
 @ask.intent('NoRepeat')
 def repeat_question():
-	return statement('Good luck! When you are done plug in your answer into leetcode!')
+	return statement('Good luck! When you are done plug in your answer into leetcode! papa bless')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
