@@ -112,7 +112,8 @@
     {
         "accepted": 78285, 
         "companies": "Amazon", 
-        "description": "Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].\r\n\r\nSolve it without division and in O(n).\r\n\r\nFor example, given [1,2,3,4], return [24,12,8,6].\r\n\r\nFollow up:\r\nCould you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)", 
+        "description": "Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Solve it without division and in O(n).",
+        "example": "For example, given [1,2,3,4], return [24,12,8,6]. Follow up: Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)", 
         "difficulty": "Medium", 
         "hints": [
             "Array"
@@ -288,7 +289,7 @@
     {
         "accepted": 107795, 
         "companies": "Amazon", 
-        "description": "Write a program to find the node at which the intersection of two singly linked lists begins.\r\n\r\nFor example, the following two linked lists: \r\n\r\nA:          a1 \u2192 a2\r\n                   \u2198\r\n                     c1 \u2192 c2 \u2192 c3\r\n                   \u2197            \r\nB:     b1 \u2192 b2 \u2192 b3\r\n\r\nbegin to intersect at node c1.\r\n\r\nNotes:\r\n\r\nIf the two linked lists have no intersection at all, return null.\r\nThe linked lists must retain their original structure after the function returns. \r\nYou may assume there are no cycles anywhere in the entire linked structure.\r\nYour code should preferably run in O(n) time and use only O(1) memory.\r\n\r\n\r\n\r\nCredits:Special thanks to @stellari for adding this problem and creating all test cases.", 
+        "description": "Write a program to find the node at which the intersection of two singly linked lists begins.", 
         "difficulty": "Easy", 
         "hints": [
             "Linked List"

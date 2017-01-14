@@ -99,7 +99,7 @@ def example_for_question():
 
 @ask.intent('YesRepeat')
 def repeat_question():
-	return question(session.attributes['company']['description'] + 'Would you like me to repeat the question or give a an example?')
+	return question(session.attributes['company']['description'] + ' Would you like me to repeat the question or give a an example?')
 
 @ask.intent('NoRepeat')
 def repeat_question():
