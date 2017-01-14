@@ -106,7 +106,7 @@ def repeat_question():
 def repeat_question():
 	if 'company' not in session.attributes:
 		return statement('Thanks for coding with us!')
-	return statement('Good luck! When you are done plug in your answer into leetcode! papa bless')
+	return statement('Good luck! When you are done plug in your answer into question number {} on leetcode! papa bless'.format(session.attributes['company']['id']))
 
 @ask.intent('Stop')
 def stop_question():
