@@ -129,7 +129,8 @@
     {
         "accepted": 164444, 
         "companies": "Amazon", 
-        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. Example: Input: b a b a d Output: b a b Note: a b a is also a valid answer. Example: Input: c b b d Output: b b", 
+        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.",
+        "example" : "Example: Input: b a b a d Output: b a b Note: a b a is also a valid answer. Example: Input: c b b d Output: b b",
         "difficulty": "Medium", 
         "hints": [
             "String"
