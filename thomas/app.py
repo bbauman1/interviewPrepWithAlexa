@@ -14,7 +14,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 @ask.launch
 def welcome_intern():
     welcome_msg = render_template('welcome')
-    return question(welcome_msg)
+    return statement(welcome_msg)
 
 @ask.intent('Default')
 def default_quesiton():
