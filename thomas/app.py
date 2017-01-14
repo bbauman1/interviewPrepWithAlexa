@@ -24,8 +24,7 @@ def get_difficulty(diff):
 
 @ask.launch
 def welcome_intern():
-    welcome_msg = render_template('welcome')
-    return question(welcome_msg)
+    return question(render_template('welcome'))
 
 @ask.intent('Default')
 def default_quesiton():
@@ -39,9 +38,17 @@ def question_type_difficulty(Diff):
 	norm_difficulty = Diff.lower().strip()
 	q = get_difficulty(norm_difficulty)
 
-	session['company'] = q 
+	session.attributes['company'] = q 
 
-	return statement(q['description'])
+	return question(q['description'] + 'Would you like me to repeat the question?')
+
+@ask.intent('YesRepeat')
+def repeat_question():
+	return question(session.attributes['company']['description'] + 'Would you like me to repeat the question?')
+
+@ask.intent('NoRepeat')
+def repeat_question():
+	return statement('Good luck! When you are done plug in your answer into leetcode!')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():

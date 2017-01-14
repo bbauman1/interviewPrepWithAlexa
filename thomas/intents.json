@@ -11,6 +11,12 @@
     },
     {
       "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "YesRepeat"
+    },
+    {
+      "intent": "NoRepeat"
     }
   ]
 }

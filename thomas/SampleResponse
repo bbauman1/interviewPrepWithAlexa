@@ -1,6 +1,10 @@
 QuestionByDifficulty ask me a {Diff} question
 QuestionByDifficulty give me a {Diff} one
 QuestionByDifficulty lets do a {Diff} question
-GetQuestion give me fizzbuzz
-GetQuestion give me a question
-GetQuestion interview me
+QuestionByDifficulty {Diff}
+QuestionByDifficulty a {Diff} one
+QuestionByDifficulty a {Diff} question
+YesRepeat Yes 
+YesRepeat Yes repeat the question
+NoRepeat No
+NoRepeat Nope
