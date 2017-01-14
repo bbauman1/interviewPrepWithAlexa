@@ -9,6 +9,7 @@
             "Design"
         ], 
         "name": "LRU Cache", 
+        "id": 146, 
         "similar_problems": [
             "(H) LFU Cache"
         ], 
@@ -24,7 +25,8 @@
             "Breadth-first Search", 
             "Union Find"
         ], 
-        "name": "Number of Islands", 
+        "name": "Number of Islands",
+        "id": 200,  
         "similar_problems": [
             "(M) Surrounded Regions", 
             " (M) Walls and Gates", 
@@ -42,6 +44,7 @@
             "Hash Table"
         ], 
         "name": "Find All Anagrams in a String", 
+        "id": 438, 
         "similar_problems": [
             "(E) Valid Anagram"
         ], 
@@ -56,6 +59,7 @@
             "Tree"
         ], 
         "name": "Lowest Common Ancestor of a Binary Tree", 
+        "id": 236, 
         "similar_problems": [
             "(E) Lowest Common Ancestor of a Binary Search Tree"
         ], 
@@ -70,15 +74,16 @@
             "Hash Table", 
             "Linked List"
         ], 
-        "name": "Copy List with Random Pointer", 
+        "name": "Copy List with Random Pointer",
+        "id": 138,  
         "similar_problems": [
             "(M) Clone Graph"
         ], 
         "total": 346268
     }, 
     {
-        "accepted": 161724, 
-        "companies": "Amazon", 
+        "accepted": 161724,
+        "companies": "Amazon",
         "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\r\n\r\nThe brackets must close in the correct order, \"()\" and \"()[]{}\" are all valid but \"(]\" and \"([)]\" are not.", 
         "difficulty": "Easy", 
         "hints": [
@@ -86,6 +91,7 @@
             "String"
         ], 
         "name": "Valid Parentheses", 
+        "id": 20,
         "similar_problems": [
             "(M) Generate Parentheses", 
             " (H) Longest Valid Parentheses", 
@@ -103,7 +109,8 @@
             "Hash Table", 
             "Design"
         ], 
-        "name": "Insert Delete GetRandom O(1)", 
+        "name": "Insert Delete GetRandom O(1)",
+        "id": 380,
         "similar_problems": [
             "(H) Insert Delete GetRandom O(1) - Duplicates allowed"
         ], 
@@ -118,7 +125,8 @@
         "hints": [
             "Array"
         ], 
-        "name": "Product of Array Except Self", 
+        "name": "Product of Array Except Self",
+        "id": 238,
         "similar_problems": [
             "(H) Trapping Rain Water", 
             " (M) Maximum Product Subarray", 
@@ -135,7 +143,8 @@
         "hints": [
             "String"
         ], 
-        "name": "Longest Palindromic Substring", 
+        "name": "Longest Palindromic Substring",
+        "id": 5,
         "similar_problems": [
             "(H) Shortest Palindrome", 
             " (E) Palindrome Permutation", 
@@ -154,6 +163,7 @@
             "Divide and Conquer"
         ], 
         "name": "Search a 2D Matrix II", 
+        "id": 240, 
         "similar_problems": [
             "(M) Search a 2D Matrix"
         ], 
@@ -167,7 +177,8 @@
         "hints": [
             "Linked List"
         ], 
-        "name": "Reverse Linked List", 
+        "name": "Reverse Linked List",
+        "id": 206, 
         "similar_problems": [
             "(M) Reverse Linked List II", 
             " (M) Binary Tree Upside Down", 
@@ -184,6 +195,7 @@
             "Tree"
         ], 
         "name": "Lowest Common Ancestor of a Binary Search Tree", 
+        "id": 235, 
         "similar_problems": [
             "(M) Lowest Common Ancestor of a Binary Tree"
         ], 
@@ -200,6 +212,7 @@
             "Two Pointers"
         ], 
         "name": "Trapping Rain Water", 
+        "id": 42, 
         "similar_problems": [
             "(M) Container With Most Water", 
             " (M) Product of Array Except Self", 
@@ -216,7 +229,8 @@
             "Stack", 
             "Design"
         ], 
-        "name": "Min Stack", 
+        "name": "Min Stack",
+        "id": 155,  
         "similar_problems": [
             "(H) Sliding Window Maximum"
         ], 
@@ -231,6 +245,7 @@
             "Tree"
         ], 
         "name": "Serialize and Deserialize BST", 
+        "id": 449, 
         "similar_problems": [
             "(H) Serialize and Deserialize Binary Tree"
         ], 
@@ -246,6 +261,7 @@
             "Two Pointers"
         ], 
         "name": "Linked List Cycle", 
+        "id": 141, 
         "similar_problems": [
             "(M) Linked List Cycle II"
         ], 
@@ -262,6 +278,7 @@
             "Sort"
         ], 
         "name": "Valid Anagram", 
+        "id": 242, 
         "similar_problems": [
             "(M) Group Anagrams", 
             " (E) Palindrome Permutation", 
@@ -280,6 +297,7 @@
             "Divide and Conquer"
         ], 
         "name": "Kth Largest Element in an Array", 
+        "id": 215, 
         "similar_problems": [
             "(M) Wiggle Sort II", 
             " (M) Top K Frequent Elements", 
@@ -296,6 +314,7 @@
             "Linked List"
         ], 
         "name": "Intersection of Two Linked Lists", 
+        "id": 160, 
         "similar_problems": [], 
         "total": 358879
     }, 
@@ -308,7 +327,8 @@
             "Linked List", 
             "Math"
         ], 
-        "name": "Add Two Numbers", 
+        "name": "Add Two Numbers",
+        "id": 2,  
         "similar_problems": [
             "(M) Multiply Strings", 
             " (E) Add Binary", 
@@ -326,7 +346,8 @@
         "hints": [
             "Dynamic Programming"
         ], 
-        "name": "Word Break", 
+        "name": "Word Break",
+        "id": 139,  
         "similar_problems": [
             "(H) Word Break II"
         ], 
@@ -341,7 +362,8 @@
             "Hash Table", 
             "String"
         ], 
-        "name": "Group Anagrams", 
+        "name": "Group Anagrams",
+        "id": 49,  
         "similar_problems": [
             "(E) Valid Anagram", 
             " (E) Group Shifted Strings"
@@ -360,6 +382,7 @@
             "String"
         ], 
         "name": "Word Ladder II", 
+        "id": 126, 
         "similar_problems": [], 
         "total": 438382
     }, 
@@ -372,7 +395,8 @@
             "Linked List", 
             "Two Pointers"
         ], 
-        "name": "Palindrome Linked List", 
+        "name": "Palindrome Linked List",
+        "id": 234,  
         "similar_problems": [
             "(E) Palindrome Number", 
             " (E) Valid Palindrome", 
@@ -390,6 +414,7 @@
             "Depth-first Search"
         ], 
         "name": "Validate Binary Search Tree", 
+        "id": 98, 
         "similar_problems": [
             "(M) Binary Tree Inorder Traversal"
         ], 
@@ -406,6 +431,7 @@
             "Binary Search"
         ], 
         "name": "Two Sum II - Input array is sorted", 
+        "id": 167, 
         "similar_problems": [
             "(E) Two Sum"
         ], 
@@ -422,6 +448,7 @@
             "String"
         ], 
         "name": "Longest Substring Without Repeating Characters", 
+        "id": 3, 
         "similar_problems": [
             "(H) Longest Substring with At Most Two Distinct Characters"
         ], 
@@ -437,7 +464,8 @@
             "Linked List", 
             "Heap"
         ], 
-        "name": "Merge k Sorted Lists", 
+        "name": "Merge k Sorted Lists",
+        "id": 23,  
         "similar_problems": [
             "(E) Merge Two Sorted Lists", 
             " (M) Ugly Number II"
@@ -452,7 +480,8 @@
         "hints": [
             "Linked List"
         ], 
-        "name": "Merge Two Sorted Lists", 
+        "name": "Merge Two Sorted Lists",
+        "id": 21,  
         "similar_problems": [
             "(H) Merge k Sorted Lists", 
             " (E) Merge Sorted Array", 
@@ -471,6 +500,7 @@
             "Two Pointers"
         ], 
         "name": "3Sum", 
+        "id": 15, 
         "similar_problems": [
             "(E) Two Sum", 
             " (M) 3Sum Closest", 
@@ -491,6 +521,7 @@
             "Bit Manipulation"
         ], 
         "name": "Subsets", 
+        "id": 78, 
         "similar_problems": [
             "(M) Generalized Abbreviation"
         ], 
@@ -507,6 +538,7 @@
             "Breadth-first Search"
         ], 
         "name": "Binary Tree Level Order Traversal", 
+        "id": 102, 
         "similar_problems": [
             "(M) Binary Tree Zigzag Level Order Traversal", 
             " (E) Binary Tree Level Order Traversal II", 
@@ -526,6 +558,7 @@
             "Math"
         ], 
         "name": "Count Primes", 
+        "id": 204, 
         "similar_problems": [
             "(E) Ugly Number", 
             " (M) Ugly Number II", 
@@ -543,6 +576,7 @@
             "Array"
         ], 
         "name": "Third Maximum Number", 
+        "id": 414, 
         "similar_problems": [
             "(M) Kth Largest Element in an Array"
         ], 
@@ -556,7 +590,8 @@
         "hints": [
             "Array"
         ], 
-        "name": "Pascal's Triangle II", 
+        "name": "Pascal's Triangle II",
+        "id": 119,  
         "similar_problems": [
             "(E) Pascal's Triangle"
         ], 
@@ -573,6 +608,7 @@
             "Heap"
         ], 
         "name": "Sort Characters By Frequency", 
+        "id": 451, 
         "similar_problems": [
             "(M) Top K Frequent Elements"
         ], 
@@ -588,6 +624,7 @@
             "String"
         ], 
         "name": "Repeated Substring Pattern", 
+        "id": 459,
         "similar_problems": [
             "(E) Implement strStr()"
         ], 
