@@ -1,4 +1,6 @@
 import logging
+import json
+
 from random import randint
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session
@@ -8,6 +10,19 @@ app = Flask(__name__)
 ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+
+with open('companies.json', 'r') as f:
+	q_dict = json.load(f)
+
+def get_difficulty(diff):
+	questions = []
+
+	for q in q_dict:
+		if q['difficulty'].lower() == diff:
+			questions.append(q)
+	real_q = questions[randint(0, len(questions) - 1)]
+
+	return real_q
 
 @ask.launch
 def welcome_intern():
@@ -29,18 +44,15 @@ def noob_question():
 
 @ask.intent('QuestionByDifficulty', convert={'Diff':'string'})
 def question_type_difficulty(Diff):
-	print Diff
-	print type(Diff)
 	if not isinstance(Diff, basestring) or Diff.lower().strip() not in ['easy', 'medium', 'hard']:
 		return question(render_template('invalid_question_difficulty')).reprompt('Would you liked an easy, medium, or hard problem')
 
 	norm_difficulty = Diff.lower().strip()
-	print norm_difficulty
-	if norm_difficulty == 'easy':
-		return statement('Easy question')
-	elif norm_difficulty == 'medium':
-		return statement('Medium question')
-	return statement('Hard question')
+	q = get_difficulty(norm_difficulty)
+
+	session['company'] = q 
+
+	return statement(q['description'])
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
