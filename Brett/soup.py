@@ -62,8 +62,8 @@ for link in links:
 	accepted = info[0].split(':')[1].strip()
 	total = info[1].split(':')[1].strip()
 	difficulty = info[2].split(':')[1].strip()
-	dic['accepted'] = accepted
-	dic['total'] = total
+	dic['accepted'] = int(accepted)
+	dic['total'] = int(total)
 	dic['difficulty'] = difficulty
 
 	description = soup.find("meta",  property="og:description")
