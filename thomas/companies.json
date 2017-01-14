@@ -17,7 +17,7 @@
     {
         "accepted": 82735, 
         "companies": "Amazon", 
-        "description": "Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\r\n\r\nExample 1:\r\n11110110101100000000\r\nAnswer: 1\r\nExample 2:\r\n11000110000010000011\r\nAnswer: 3\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.", 
+        "description": "Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.", 
         "difficulty": "Medium", 
         "hints": [
             "Depth-first Search", 
@@ -574,7 +574,8 @@
     {
         "accepted": 14298, 
         "companies": "Amazon", 
-        "description": "Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.  You may assume the given string consists of lowercase English letters only and its length  will not exceed 10000. \r\n\r\nExample 1:\r\n\r\nInput: \"abab\"\r\n\r\nOutput: True\r\n\r\nExplanation: It's the substring \"ab\" twice.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: \"aba\"\r\n\r\nOutput: False\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput: \"abcabcabcabc\"\r\n\r\nOutput: True\r\n\r\nExplanation: It's the substring \"abc\" four times. (And the substring \"abcabc\" twice.)", 
+        "description": "Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.  You may assume the given string consists of lowercase English letters only and its length  will not exceed 10000.", 
+        "example": "Example 1: Input: a b a b Output: True Explanation: It's the substring a b twice. Example 2: Input: a b a Output: False Example 3 Input: a b c a b c a b c a b c Output: True Explanation: It's the substring a b c four times. (And the substring a b c a b c  twice.)",
         "difficulty": "Easy", 
         "hints": [
             "String"
