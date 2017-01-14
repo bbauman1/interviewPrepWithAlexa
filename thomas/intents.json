@@ -1,9 +1,6 @@
 {
   "intents": [
     {
-      "intent": "GetQuestion"
-    },
-    {
       "intent": "QuestionByDifficulty",
       "slots": [
         {
