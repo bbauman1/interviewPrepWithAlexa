@@ -114,7 +114,7 @@
 				function getStuff() {
 					var storage = firebase.storage();
 					var pathReference = storage.ref('');
-					alert(pathReference);
+					alert(pathReference.child('cat_y.wav').downloadURL);
 				}
 
 				firebase.auth().onAuthStateChanged(function(user) {
@@ -122,7 +122,7 @@
 				    // User is signed in.
 				    var isAnonymous = user.isAnonymous;
 				    var uid = user.uid;
-
+						getStuff();
 				    // ...
 				  } else {
 				    // User is signed out.
