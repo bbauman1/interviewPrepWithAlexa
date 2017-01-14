@@ -79,6 +79,7 @@ def question_type_difficulty(Diff):
 	q = get_difficulty(norm_difficulty)
 
 	session.attributes['company'] = q 
+	session.attributes[norm_difficulty] = norm_difficulty
 	#start_timer(20)
 	print("++++++++++++++++")
 	print(q['name'])
@@ -95,7 +96,7 @@ def example_for_question():
 	if 'example' not in q:
 		return question('No example available. Would you like me to repeat the question?')
 	
-	return question(q['example']+'. Would you like to repeat the example or question?')
+	return question(q['example']+', Would you like to repeat the example or question?')
 
 @ask.intent('YesRepeat')
 def repeat_question():
@@ -104,6 +105,10 @@ def repeat_question():
 @ask.intent('NoRepeat')
 def repeat_question():
 	return statement('Good luck! When you are done plug in your answer into leetcode! papa bless')
+
+@ask.intent('Stop')
+def stop_question():
+	return statement('Thanks for coding with us!')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
