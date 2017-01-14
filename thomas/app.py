@@ -16,6 +16,10 @@ def welcome_intern():
     welcome_msg = render_template('welcome')
     return question(welcome_msg)
 
+@ask.intent('Default')
+def default_quesiton():
+	return question('come again hombre...?')
+
 @ask.intent('GetQuestion')
 def get_question():
 	return statement('No questions yet fuck off dude')
