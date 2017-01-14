@@ -1,6 +1,11 @@
 html, body {
    background-color: #F5EBEE;
    font-family: 'Fira Sans Condensed', sans-serif;
+   font-size: 20px;
+}
+
+h1 {
+   font-size: 48px;
 }
 
 .navbar {
@@ -14,7 +19,7 @@ html, body {
 }
 
 .navbar-inverse li > a:hover, .navbar-inverse li > a:focus {
-   color: #F5EBEE;  /*Sets the text hover color on navbar*/
+   color: #F5EBEE; a
 }
 
 .navbar-inverse .navbar-brand {
@@ -40,7 +45,11 @@ a:hover, .navbar-inverse .active > a:focus {
    color: white;
 }
 
-#title .btn {
-   display: inline;
-   padding: 10px;
+#solution-editor {
+   width: 100%;
+}
+
+.dropdown-item {
+   padding-left: 5px;
+   color: #F44336;
 }
