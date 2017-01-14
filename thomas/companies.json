@@ -2,7 +2,8 @@
     {
         "accepted": 106145, 
         "companies": "Amazon", 
-        "description": "Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set.\r\n\r\n\r\n\r\nget(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.\r\nset(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.", 
+        "description": "Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set. get () with an input parameter of key - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. set() function with parameters key and value, Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.", 
+        "example": "get with parameter one should return -1 since it is empty. Set with key equals 3 and value 5 then get 3 should return 5",
         "difficulty": "Hard", 
         "hints": [
             "Design"
@@ -12,41 +13,7 @@
             "(H) LFU Cache"
         ], 
         "total": 663908
-    }, 
-    {
-        "accepted": 395617, 
-        "companies": "Amazon", 
-        "description": "Given an array of integers, return indices of the two numbers such that they add up to a specific target.\r\n\r\nYou may assume that each input would have exactly one solution.\r\n\r\n\r\nExample:\r\n\r\nGiven nums = [2, 7, 11, 15], target = 9,\r\n\r\nBecause nums[0] + nums[1] = 2 + 7 = 9,\r\nreturn [0, 1].\r\n\r\n\r\n\r\n\r\nUPDATE (2016/2/13):\r\nThe return format had been changed to zero-based indices. Please read the above updated description carefully.", 
-        "difficulty": "Easy", 
-        "hints": [
-            "Array", 
-            "Hash Table"
-        ], 
-        "name": "Two Sum", 
-        "similar_problems": [
-            "(M) 3Sum", 
-            " (M) 4Sum", 
-            " (M) Two Sum II - Input array is sorted", 
-            " (E) Two Sum III - Data structure design"
-        ], 
-        "total": 1319638
-    }, 
-    {
-        "accepted": 45272, 
-        "companies": "Amazon", 
-        "description": "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. \r\n\r\nDesign an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.\r\n\r\n\r\nFor example, you may serialize the following tree\r\n\r\n    1\r\n   / \\\r\n  2   3\r\n     / \\\r\n    4   5\r\n\r\nas \"[1,2,3,null,null,4,5]\", just the same as how LeetCode OJ serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.\r\n\r\n\r\n\r\nNote: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.\r\n\r\n\r\nCredits:Special thanks to @Louis1992 for adding this problem and creating all test cases.", 
-        "difficulty": "Hard", 
-        "hints": [
-            "Tree", 
-            "Design"
-        ], 
-        "name": "Serialize and Deserialize Binary Tree", 
-        "similar_problems": [
-            "(M) Encode and Decode Strings", 
-            " (M) Serialize and Deserialize BST"
-        ], 
-        "total": 143107
-    }, 
+    },  
     {
         "accepted": 82735, 
         "companies": "Amazon", 
@@ -65,20 +32,6 @@
             " (M) Number of Connected Components in an Undirected Graph"
         ], 
         "total": 256028
-    }, 
-    {
-        "accepted": 4158, 
-        "companies": "Amazon", 
-        "description": "Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.\r\n\r\n\r\n\r\nget(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.\r\nput(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item. For the purpose of this problem, when there is a tie (i.e., two or more keys that have the same frequency), the least recently used key would be evicted.\r\n\r\n\r\nFollow up:\r\nCould you do both operations in O(1) time complexity?\r\n\r\nExample:\r\n\r\nLFUCache cache = new LFUCache( 2 /* capacity */ );\r\n\r\ncache.put(1, 1);\r\ncache.put(2, 2);\r\ncache.get(1);       // returns 1\r\ncache.put(3, 3);    // evicts key 2\r\ncache.get(2);       // returns -1 (not found)\r\ncache.get(3);       // returns 3.\r\ncache.put(4, 4);    // evicts key 1.\r\ncache.get(1);       // returns -1 (not found)\r\ncache.get(3);       // returns 3\r\ncache.get(4);       // returns 4", 
-        "difficulty": "Hard", 
-        "hints": [
-            "Design"
-        ], 
-        "name": "LFU Cache", 
-        "similar_problems": [
-            "(H) LRU Cache"
-        ], 
-        "total": 21576
     }, 
     {
         "accepted": 14133, 
@@ -171,71 +124,6 @@
             " (H) Paint House II"
         ], 
         "total": 166264
-    }, 
-    {
-        "accepted": 47940, 
-        "companies": "Amazon", 
-        "description": "Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.\r\n\r\nFor example,\r\nGiven nums = [1,3,-1,-3,5,3,6,7], and k = 3.\r\n\r\n\r\nWindow position                Max\r\n---------------               -----\r\n[1  3  -1] -3  5  3  6  7       3\r\n 1 [3  -1  -3] 5  3  6  7       3\r\n 1  3 [-1  -3  5] 3  6  7       5\r\n 1  3  -1 [-3  5  3] 6  7       5\r\n 1  3  -1  -3 [5  3  6] 7       6\r\n 1  3  -1  -3  5 [3  6  7]      7\r\n\r\n\r\nTherefore, return the max sliding window as [3,3,5,5,6,7].\r\n\r\nNote: \r\nYou may assume k is always valid, ie: 1 \u2264 k \u2264 input array's size for non-empty array.\r\n\r\nFollow up:\r\nCould you solve it in linear time?\r\n\r\n\r\n  How about using a data structure such as deque (double-ended queue)?\r\n  The queue size need not be the same as the window\u2019s size.\r\n  Remove redundant elements and the queue should store only elements that need to be considered.", 
-        "difficulty": "Hard", 
-        "hints": [
-            "Heap"
-        ], 
-        "name": "Sliding Window Maximum", 
-        "similar_problems": [
-            "(H) Minimum Window Substring", 
-            " (E) Min Stack", 
-            " (H) Longest Substring with At Most Two Distinct Characters", 
-            " (H) Paint House II"
-        ], 
-        "total": 152417
-    }, 
-    {
-        "accepted": 157061, 
-        "companies": "Amazon", 
-        "description": "Say you have an array for which the ith element is the price of a given stock on day i.\r\n\r\nIf you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.\r\n\r\nExample 1:\r\n\r\nInput: [7, 1, 5, 3, 6, 4]\r\nOutput: 5\r\n\r\nmax. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: [7, 6, 4, 3, 1]\r\nOutput: 0\r\n\r\nIn this case, no transaction is done, i.e. max profit = 0.", 
-        "difficulty": "Easy", 
-        "hints": [
-            "Array", 
-            "Dynamic Programming"
-        ], 
-        "name": "Best Time to Buy and Sell Stock", 
-        "similar_problems": [
-            "(M) Maximum Subarray", 
-            " (M) Best Time to Buy and Sell Stock II", 
-            " (H) Best Time to Buy and Sell Stock III", 
-            " (H) Best Time to Buy and Sell Stock IV", 
-            " (M) Best Time to Buy and Sell Stock with Cooldown"
-        ], 
-        "total": 401353
-    }, 
-    {
-        "accepted": 121138, 
-        "companies": "Amazon", 
-        "description": "Given a digit string, return all possible letter combinations that the number could represent.\r\n\r\n\r\n\r\nA mapping of digit to letters (just like on the telephone buttons) is given below.\r\n\r\n\r\n\r\nInput:Digit string \"23\"\r\nOutput: [\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"].\r\n\r\n\r\n\r\nNote:\r\nAlthough the above answer is in lexicographical order, your answer could be in any order you want.", 
-        "difficulty": "Medium", 
-        "hints": [
-            "Backtracking", 
-            "String"
-        ], 
-        "name": "Letter Combinations of a Phone Number", 
-        "similar_problems": [
-            "(M) Generate Parentheses", 
-            " (M) Combination Sum", 
-            " (E) Binary Watch"
-        ], 
-        "total": 373614
-    }, 
-    {
-        "accepted": 93720, 
-        "companies": "Amazon", 
-        "description": "You are given an n x n 2D matrix representing an image.\r\nRotate the image by 90 degrees (clockwise).\r\nFollow up:\r\nCould you do this in-place?", 
-        "difficulty": "Medium", 
-        "hints": [
-            "Array"
-        ], 
-        "name": "Rotate Image", 
-        "similar_problems": [], 
-        "total": 252412
     }, 
     {
         "accepted": 164444, 
@@ -619,51 +507,12 @@
             " (M) Binary Tree Vertical Order Traversal"
         ], 
         "total": 396801
-    }, 
-    {
-        "accepted": 88725, 
-        "companies": "Amazon", 
-        "description": "Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.\r\n\r\n\r\nclick to show follow up.\r\n\r\nFollow up:\r\n\r\n\r\nDid you use extra space?\r\nA straight forward solution using O(mn) space is probably a bad idea.\r\nA simple improvement uses O(m + n) space, but still not the best solution.\r\nCould you devise a constant space solution?", 
-        "difficulty": "Medium", 
-        "hints": [
-            "Array"
-        ], 
-        "name": "Set Matrix Zeroes", 
-        "similar_problems": [
-            "(M) Game of Life"
-        ], 
-        "total": 252471
-    }, 
-    {
-        "accepted": 78792, 
-        "companies": "Amazon", 
-        "description": "The gray code is a binary numeral system where two successive values differ in only one bit.\r\n\r\nGiven a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.\r\n\r\nFor example, given n = 2, return [0,1,3,2]. Its gray code sequence is:\r\n\r\n00 - 0\r\n01 - 1\r\n11 - 3\r\n10 - 2\r\n\r\n\r\nNote:\r\nFor a given n, a gray code sequence is not uniquely defined.\r\n\r\nFor example, [0,2,3,1] is also a valid gray code sequence according to the above definition.\r\n\r\nFor now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.", 
-        "difficulty": "Medium", 
-        "hints": [
-            "Backtracking"
-        ], 
-        "name": "Gray Code", 
-        "similar_problems": [], 
-        "total": 200183
-    }, 
-    {
-        "accepted": 12706, 
-        "companies": "Amazon", 
-        "description": "Design a simplified version of Twitter where users can post tweets, follow/unfollow another user and is able to see the 10 most recent tweets in the user's news feed. Your design should support the following methods:\r\n\r\n\r\n\r\npostTweet(userId, tweetId): Compose a new tweet.\r\ngetNewsFeed(userId): Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.\r\nfollow(followerId, followeeId): Follower follows a followee.\r\nunfollow(followerId, followeeId): Follower unfollows a followee.\r\n\r\n\r\n\r\nExample:\r\n\r\nTwitter twitter = new Twitter();\r\n\r\n// User 1 posts a new tweet (id = 5).\r\ntwitter.postTweet(1, 5);\r\n\r\n// User 1's news feed should return a list with 1 tweet id -> [5].\r\ntwitter.getNewsFeed(1);\r\n\r\n// User 1 follows user 2.\r\ntwitter.follow(1, 2);\r\n\r\n// User 2 posts a new tweet (id = 6).\r\ntwitter.postTweet(2, 6);\r\n\r\n// User 1's news feed should return a list with 2 tweet ids -> [6, 5].\r\n// Tweet id 6 should precede tweet id 5 because it is posted after tweet id 5.\r\ntwitter.getNewsFeed(1);\r\n\r\n// User 1 unfollows user 2.\r\ntwitter.unfollow(1, 2);\r\n\r\n// User 1's news feed should return a list with 1 tweet id -> [5],\r\n// since user 1 is no longer following user 2.\r\ntwitter.getNewsFeed(1);", 
-        "difficulty": "Medium", 
-        "hints": [
-            "Hash Table", 
-            "Heap", 
-            "Design"
-        ], 
-        "name": "Design Twitter", 
-        "similar_problems": [], 
-        "total": 51846
-    }, 
+    },  
     {
         "accepted": 96357, 
         "companies": "Amazon", 
-        "description": "Description:\r\nCount the number of prime numbers less than a non-negative number, n.\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.\r\n\r\n\r\n  Let's start with a isPrime function. To determine if a number is prime, we need to check if it is not divisible by any number less than n. The runtime complexity of isPrime function would be O(n) and hence counting the total prime numbers up to n would be O(n2). Could we do better?\r\n  \r\n  As we know the number must not be divisible by any number > n / 2, we can immediately cut the total iterations half by dividing only up to n / 2. Could we still do better?\r\n  \r\n  Let's write down all of 12's factors:\r\n\r\n2 \u00d7 6 = 12\r\n3 \u00d7 4 = 12\r\n4 \u00d7 3 = 12\r\n6 \u00d7 2 = 12\r\n\r\n\r\nAs you can see, calculations of 4 \u00d7 3 and 6 \u00d7 2 are not necessary. Therefore, we only need to consider factors up to &radic;n because, if n is divisible by some number p, then n = p \u00d7 q and since p &le; q, we could derive that p &le; &radic;n.\r\n\r\nOur total runtime has now improved to O(n1.5), which is slightly better. Is there a faster approach?\r\n\r\n\r\npublic int countPrimes(int n) {\r\n   int count = 0;\r\n   for (int i = 1; i < n; i++) {\r\n      if (isPrime(i)) count++;\r\n   }\r\n   return count;\r\n}\r\n\r\nprivate boolean isPrime(int num) {\r\n   if (num <= 1) return false;\r\n   // Loop's ending condition is i * i <= num instead of i <= sqrt(num)\r\n   // to avoid repeatedly calling an expensive function sqrt().\r\n   for (int i = 2; i * i <= num; i++) {\r\n      if (num % i == 0) return false;\r\n   }\r\n   return true;\r\n}\r\n\r\n  \r\n  The Sieve of Eratosthenes is one of the most efficient ways to find all prime numbers up to n. But don't let that name scare you, I promise that the concept is surprisingly simple.\r\n\r\n\r\n\r\nSieve of Eratosthenes: algorithm steps for primes below 121. \"Sieve of Eratosthenes Animation\" by SKopp is licensed under CC BY 2.0.\r\n\r\n\r\nWe start off with a table of n numbers. Let's look at the first number, 2. We know all multiples of 2 must not be primes, so we mark them off as non-primes. Then we look at the next number, 3. Similarly, all multiples of 3 such as 3 \u00d7 2 = 6, 3 \u00d7 3 = 9, ... must not be primes, so we mark them off as well. Now we look at the next number, 4, which was already marked off. What does this tell you? Should you mark off all multiples of 4 as well?\r\n  \r\n  4 is not a prime because it is divisible by 2, which means all multiples of 4 must also be divisible by 2 and were already marked off. So we can skip 4 immediately and go to the next number, 5. Now, all multiples of 5 such as 5 \u00d7 2 = 10, 5 \u00d7 3 = 15, 5 \u00d7 4 = 20, 5 \u00d7 5 = 25, ... can be marked off. There is a slight optimization here, we do not need to start from 5 \u00d7 2 = 10. Where should we start marking off?\r\n  \r\n  In fact, we can mark off multiples of 5 starting at 5 \u00d7 5 = 25, because 5 \u00d7 2 = 10 was already marked off by multiple of 2, similarly 5 \u00d7 3 = 15 was already marked off by multiple of 3. Therefore, if the current number is p, we can always mark off multiples of p starting at p2, then in increments of p: p2 + p, p2 + 2p, ... Now what should be the terminating loop condition?\r\n  \r\n  It is easy to say that the terminating loop condition is p < n, which is certainly correct but not efficient. Do you still remember Hint #3?\r\n  \r\n  Yes, the terminating loop condition can be p < &radic;n, as all non-primes &ge; &radic;n must have already been marked off. When the loop terminates, all the numbers in the table that are non-marked are prime.\r\n\r\nThe Sieve of Eratosthenes uses an extra O(n) memory and its runtime complexity is O(n log log n). For the more mathematically inclined readers, you can read more about its algorithm complexity on Wikipedia.\r\n\r\n\r\npublic int countPrimes(int n) {\r\n   boolean[] isPrime = new boolean[n];\r\n   for (int i = 2; i < n; i++) {\r\n      isPrime[i] = true;\r\n   }\r\n   // Loop's ending condition is i * i < n instead of i < sqrt(n)\r\n   // to avoid repeatedly calling an expensive function sqrt().\r\n   for (int i = 2; i * i < n; i++) {\r\n      if (!isPrime[i]) continue;\r\n      for (int j = i * i; j < n; j += i) {\r\n         isPrime[j] = false;\r\n      }\r\n   }\r\n   int count = 0;\r\n   for (int i = 2; i < n; i++) {\r\n      if (isPrime[i]) count++;\r\n   }\r\n   return count;\r\n}", 
+        "description": "Count the number of primes from 1 to less than or equal t n.",
+        "example": "If n equals 24. Return 2, 3, 5, 7, 11, 13, 17, 23", 
         "difficulty": "Easy", 
         "hints": [
             "Hash Table", 
@@ -680,7 +529,8 @@
     {
         "accepted": 17144, 
         "companies": "Amazon", 
-        "description": "Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).\r\n\r\nExample 1:\r\n\r\nInput: [3, 2, 1]\r\n\r\nOutput: 1\r\n\r\nExplanation: The third maximum is 1.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: [1, 2]\r\n\r\nOutput: 2\r\n\r\nExplanation: The third maximum does not exist, so the maximum (2) is returned instead.\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput: [2, 2, 3, 1]\r\n\r\nOutput: 1\r\n\r\nExplanation: Note that the third maximum here means the third maximum distinct number.\r\nBoth numbers with value 2 are both considered as second maximum.", 
+        "description": "Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).",
+        "example" :"Example given array 1 4 80 2 9. Return 4",
         "difficulty": "Easy", 
         "hints": [
             "Array"
@@ -692,43 +542,9 @@
         "total": 64061
     }, 
     {
-        "accepted": 145197, 
-        "companies": "Amazon", 
-        "description": "Implement atoi to convert a string to an integer.\r\n\r\nHint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.\r\n\r\n\r\nNotes: \r\nIt is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front. \r\n\r\n\r\nUpdate (2015-02-10):\r\nThe signature of the C++ function had been updated. If you still see your function signature accepts a const char * argument, please click the reload button  to reset your code definition.\r\n\r\n\r\nspoilers alert... click to show requirements for atoi.\r\n\r\nRequirements for atoi:\r\n\r\nThe function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.\r\n\r\nThe string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.\r\n\r\nIf the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.\r\n\r\nIf no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.", 
-        "difficulty": "Easy", 
-        "hints": [
-            "Math", 
-            "String"
-        ], 
-        "name": "String to Integer (atoi)", 
-        "similar_problems": [
-            "(E) Reverse Integer", 
-            " (H) Valid Number"
-        ], 
-        "total": 1051069
-    }, 
-    {
-        "accepted": 66077, 
-        "companies": "Amazon", 
-        "description": "Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.\r\n\r\n\r\nFor example:\r\nGiven the following binary tree,\r\n\r\n   1            <---\r\n /   \\\r\n2     3         <---\r\n \\     \\\r\n  5     4       <---\r\n\r\n\r\n\r\nYou should return [1, 3, 4].\r\n\r\n\r\nCredits:Special thanks to @amrsaqr for adding this problem and creating all test cases.", 
-        "difficulty": "Medium", 
-        "hints": [
-            "Tree", 
-            "                    ", 
-            "                    Depth-first Search", 
-            "                    ", 
-            "                    Breadth-first Search"
-        ], 
-        "name": "Binary Tree Right Side View", 
-        "similar_problems": [
-            "(M) Populating Next Right Pointers in Each Node"
-        ], 
-        "total": 170670
-    }, 
-    {
         "accepted": 100463, 
         "companies": "Amazon", 
-        "description": "Given an index k, return the kth row of the Pascal's triangle.\r\n\r\n\r\nFor example, given k = 3,\r\nReturn [1,3,3,1].\r\n\r\n\r\n\r\nNote:\r\nCould you optimize your algorithm to use only O(k) extra space?", 
+        "description": "Given an index k, return the kth row of the Pascal's triangle.", 
         "difficulty": "Easy", 
         "hints": [
             "Array"
@@ -742,7 +558,8 @@
     {
         "accepted": 13738, 
         "companies": "Amazon", 
-        "description": "Given a string, sort it in decreasing order based on the frequency of characters.\r\n\r\nExample 1:\r\n\r\nInput:\r\n\"tree\"\r\n\r\nOutput:\r\n\"eert\"\r\n\r\nExplanation:\r\n'e' appears twice while 'r' and 't' both appear once.\r\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput:\r\n\"cccaaa\"\r\n\r\nOutput:\r\n\"cccaaa\"\r\n\r\nExplanation:\r\nBoth 'c' and 'a' appear three times, so \"aaaccc\" is also a valid answer.\r\nNote that \"cacaca\" is incorrect, as the same characters must be together.\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput:\r\n\"Aabb\"\r\n\r\nOutput:\r\n\"bbAa\"\r\n\r\nExplanation:\r\n\"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\r\nNote that 'A' and 'a' are treated as two different characters.", 
+        "description": "Given a string, sort it in decreasing order based on the frequency of characters.",
+        "example": "Given string b a b b b c e w q q q . Return b b b b q q q a c e w", 
         "difficulty": "Medium", 
         "hints": [
             "Hash Table", 
@@ -767,17 +584,5 @@
             "(E) Implement strStr()"
         ], 
         "total": 36144
-    }, 
-    {
-        "accepted": 13982, 
-        "companies": "Amazon", 
-        "description": "Given an array of integers A and let n to be its length.\r\n\r\n\r\n\r\nAssume Bk to be an array obtained by rotating the array A k positions clock-wise, we define a \"rotation function\" F on A as follow:\r\n\r\n\r\n\r\nF(k) = 0 * Bk[0] + 1 * Bk[1] + ... + (n-1) * Bk[n-1].\r\n\r\nCalculate the maximum value of F(0), F(1), ..., F(n-1). \r\n\r\n\r\nNote:\r\nn is guaranteed to be less than 105.\r\n\r\n\r\nExample:\r\n\r\nA = [4, 3, 2, 6]\r\n\r\nF(0) = (0 * 4) + (1 * 3) + (2 * 2) + (3 * 6) = 0 + 3 + 4 + 18 = 25\r\nF(1) = (0 * 6) + (1 * 4) + (2 * 3) + (3 * 2) = 0 + 4 + 6 + 6 = 16\r\nF(2) = (0 * 2) + (1 * 6) + (2 * 4) + (3 * 3) = 0 + 6 + 8 + 9 = 23\r\nF(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26\r\n\r\nSo the maximum value of F(0), F(1), F(2), F(3) is F(3) = 26.", 
-        "difficulty": "Easy", 
-        "hints": [
-            "Math"
-        ], 
-        "name": "Rotate Function", 
-        "similar_problems": [], 
-        "total": 45945
     }
 ]

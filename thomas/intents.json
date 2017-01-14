@@ -10,6 +10,15 @@
       ]
     },
     {
+      "intent": "QuestionByName",
+      "slots": [
+        {
+          "name": "QuestionName",
+          "type": "AMAZON.LITERAL" 
+        }
+      ]
+    },
+    {
       "intent": "AMAZON.HelpIntent"
     },
     {
