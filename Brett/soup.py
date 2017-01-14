@@ -20,7 +20,7 @@ url = os.getcwd() + "/all.html"
 page = open(url)
 soup = BeautifulSoup(page.read(), "lxml")
 links = []
-
+count = 0
 problems = soup.findAll(href=re.compile('.*problem.*'))
 for p in problems:
 	if p == '/problems/reverse-words-in-a-string-ii/':
@@ -32,6 +32,7 @@ for p in problems:
 json_arr = []
 
 for link in links:
+	count += 1
 	prob = 'https://leetcode.com' + link
 	dic = {}
 	html = requests.get(prob)
@@ -75,6 +76,7 @@ for link in links:
 	json_arr.append(dic)
 
 # pprint(json_arr)
+print count
 write_json(json_arr)
 
 
