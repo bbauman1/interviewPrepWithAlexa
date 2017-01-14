@@ -8,15 +8,15 @@ from pprint import pprint
 
 def read_json():
 	dic = {}
-	with open('companies.json', 'r') as fp:
+	with open('all.json', 'r') as fp:
 		dic = json.load(fp)
 	return dic
 
 def write_json(dic):
-	with open('companies.json', 'w') as fp:
+	with open('all.json', 'w') as fp:
 		json.dump(dic, fp, sort_keys=True, indent=4)
 
-url = os.getcwd() + "/amazon-qs.htm"
+url = os.getcwd() + "/all.html"
 page = open(url)
 soup = BeautifulSoup(page.read(), "lxml")
 links = []
