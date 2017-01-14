@@ -14,7 +14,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 @ask.launch
 def welcome_intern():
     welcome_msg = render_template('welcome')
-    return statement(welcome_msg)
+    return question(welcome_msg)
 
 @ask.intent('Default')
 def default_quesiton():
@@ -28,6 +28,21 @@ def get_question():
 def noob_question():
 	message = "For zero to one hundred, print fizz if the number is even, and print buzz if the number is odd"
 	return statement(message)
+
+@ask.intent('QuestionByDifficulty', convert={'Diff':'string'})
+def question_type_difficulty(Diff):
+	print Diff
+	print type(Diff)
+	if not isinstance(Diff, basestring) or Diff.lower().strip() not in ['easy', 'medium', 'hard']:
+		return question(render_template('invalid_question_difficulty')).reprompt('Would you liked an easy, medium, or hard problem')
+
+	norm_difficulty = Diff.lower().strip()
+	print norm_difficulty
+	if norm_difficulty == 'easy':
+		return statement('Easy question')
+	elif norm_difficulty == 'medium':
+		return statement('Medium question')
+	return statement('Hard question')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():

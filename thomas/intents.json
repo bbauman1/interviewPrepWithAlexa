@@ -4,7 +4,13 @@
       "intent": "GetQuestion"
     },
     {
-      "intent": "NoobQuestion"
+      "intent": "QuestionByDifficulty",
+      "slots": [
+        {
+          "name": "Diff",
+          "type": "Difficulty"
+        }
+      ]
     },
     {
       "intent": "AMAZON.HelpIntent"
