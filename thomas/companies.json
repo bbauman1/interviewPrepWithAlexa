@@ -1,0 +1,588 @@
+[
+    {
+        "accepted": 106145, 
+        "companies": "Amazon", 
+        "description": "Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set. get () with an input parameter of key - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. set() function with parameters key and value, Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.", 
+        "example": "get with parameter one should return -1 since it is empty. Set with key equals 3 and value 5 then get 3 should return 5",
+        "difficulty": "Hard", 
+        "hints": [
+            "Design"
+        ], 
+        "name": "LRU Cache", 
+        "similar_problems": [
+            "(H) LFU Cache"
+        ], 
+        "total": 663908
+    },  
+    {
+        "accepted": 82735, 
+        "companies": "Amazon", 
+        "description": "Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\r\n\r\nExample 1:\r\n11110110101100000000\r\nAnswer: 1\r\nExample 2:\r\n11000110000010000011\r\nAnswer: 3\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Depth-first Search", 
+            "Breadth-first Search", 
+            "Union Find"
+        ], 
+        "name": "Number of Islands", 
+        "similar_problems": [
+            "(M) Surrounded Regions", 
+            " (M) Walls and Gates", 
+            " (H) Number of Islands II", 
+            " (M) Number of Connected Components in an Undirected Graph"
+        ], 
+        "total": 256028
+    }, 
+    {
+        "accepted": 14133, 
+        "companies": "Amazon", 
+        "description": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.\r\n\r\nStrings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.\r\n\r\nThe order of output does not matter.\r\n\r\nExample 1:\r\n\r\nInput:\r\ns: \"cbaebabacd\" p: \"abc\"\r\n\r\nOutput:\r\n[0, 6]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\r\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput:\r\ns: \"abab\" p: \"ab\"\r\n\r\nOutput:\r\n[0, 1, 2]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\r\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\r\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Hash Table"
+        ], 
+        "name": "Find All Anagrams in a String", 
+        "similar_problems": [
+            "(E) Valid Anagram"
+        ], 
+        "total": 42399
+    }, 
+    {
+        "accepted": 79091, 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.\r\n\r\n\r\n\r\nAccording to the definition of LCA on Wikipedia: \u201cThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).\u201d\r\n\r\n\r\n\r\n        _______3______\r\n       /              \\\r\n    ___5__          ___1__\r\n   /      \\        /      \\\r\n   6      _2       0       8\r\n         /  \\\r\n         7   4\r\n\r\n\r\n\r\nFor example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3. Another example is LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Lowest Common Ancestor of a Binary Tree", 
+        "similar_problems": [
+            "(E) Lowest Common Ancestor of a Binary Search Tree"
+        ], 
+        "total": 269828
+    }, 
+    {
+        "accepted": 92215, 
+        "companies": "Amazon", 
+        "description": "A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.\r\n\r\n\r\n\r\nReturn a deep copy of the list.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Hash Table", 
+            "Linked List"
+        ], 
+        "name": "Copy List with Random Pointer", 
+        "similar_problems": [
+            "(M) Clone Graph"
+        ], 
+        "total": 346268
+    }, 
+    {
+        "accepted": 161724, 
+        "companies": "Amazon", 
+        "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\r\n\r\nThe brackets must close in the correct order, \"()\" and \"()[]{}\" are all valid but \"(]\" and \"([)]\" are not.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Stack", 
+            "String"
+        ], 
+        "name": "Valid Parentheses", 
+        "similar_problems": [
+            "(M) Generate Parentheses", 
+            " (H) Longest Valid Parentheses", 
+            " (H) Remove Invalid Parentheses"
+        ], 
+        "total": 503241
+    }, 
+    {
+        "accepted": 16645, 
+        "companies": "Amazon", 
+        "description": "Design a data structure that supports all following operations in average O(1) time.\r\n\r\n\r\n\r\ninsert(val): Inserts an item val to the set if not already present.\r\nremove(val): Removes an item val from the set if present.\r\ngetRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.\r\n\r\n\r\n\r\nExample:\r\n\r\n// Init an empty set.\r\nRandomizedSet randomSet = new RandomizedSet();\r\n\r\n// Inserts 1 to the set. Returns true as 1 was inserted successfully.\r\nrandomSet.insert(1);\r\n\r\n// Returns false as 2 does not exist in the set.\r\nrandomSet.remove(2);\r\n\r\n// Inserts 2 to the set, returns true. Set now contains [1,2].\r\nrandomSet.insert(2);\r\n\r\n// getRandom should return either 1 or 2 randomly.\r\nrandomSet.getRandom();\r\n\r\n// Removes 1 from the set, returns true. Set now contains [2].\r\nrandomSet.remove(1);\r\n\r\n// 2 was already in the set, so return false.\r\nrandomSet.insert(2);\r\n\r\n// Since 2 is the only number in the set, getRandom always return 2.\r\nrandomSet.getRandom();", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Hash Table", 
+            "Design"
+        ], 
+        "name": "Insert Delete GetRandom O(1)", 
+        "similar_problems": [
+            "(H) Insert Delete GetRandom O(1) - Duplicates allowed"
+        ], 
+        "total": 43309
+    }, 
+    {
+        "accepted": 78285, 
+        "companies": "Amazon", 
+        "description": "Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].\r\n\r\nSolve it without division and in O(n).\r\n\r\nFor example, given [1,2,3,4], return [24,12,8,6].\r\n\r\nFollow up:\r\nCould you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Product of Array Except Self", 
+        "similar_problems": [
+            "(H) Trapping Rain Water", 
+            " (M) Maximum Product Subarray", 
+            " (H) Paint House II"
+        ], 
+        "total": 166264
+    }, 
+    {
+        "accepted": 164444, 
+        "companies": "Amazon", 
+        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.\r\n\r\nExample:\r\n\r\nInput: \"babad\"\r\n\r\nOutput: \"bab\"\r\n\r\nNote: \"aba\" is also a valid answer.\r\n\r\n\r\n\r\nExample:\r\n\r\nInput: \"cbbd\"\r\n\r\nOutput: \"bb\"", 
+        "difficulty": "Medium", 
+        "hints": [
+            "String"
+        ], 
+        "name": "Longest Palindromic Substring", 
+        "similar_problems": [
+            "(H) Shortest Palindrome", 
+            " (E) Palindrome Permutation", 
+            " (H) Palindrome Pairs"
+        ], 
+        "total": 669434
+    }, 
+    {
+        "accepted": 62251, 
+        "companies": "Amazon", 
+        "description": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:\r\n\r\n\r\n\r\nIntegers in each row are sorted in ascending from left to right.\r\nIntegers in each column are sorted in ascending from top to bottom.\r\n\r\n\r\n\r\n\r\nFor example,\r\n\r\nConsider the following matrix:\r\n\r\n\r\n[\r\n  [1,   4,  7, 11, 15],\r\n  [2,   5,  8, 12, 19],\r\n  [3,   6,  9, 16, 22],\r\n  [10, 13, 14, 17, 24],\r\n  [18, 21, 23, 26, 30]\r\n]\r\n\r\n\r\nGiven target = 5, return true.\r\nGiven target = 20, return false.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Binary Search", 
+            "Divide and Conquer"
+        ], 
+        "name": "Search a 2D Matrix II", 
+        "similar_problems": [
+            "(M) Search a 2D Matrix"
+        ], 
+        "total": 164062
+    }, 
+    {
+        "accepted": 180214, 
+        "companies": "Amazon", 
+        "description": "Reverse a singly linked list.\r\n\r\nclick to show more hints.\r\n\r\nHint:\r\nA linked list can be reversed either iteratively or recursively. Could you implement both?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List"
+        ], 
+        "name": "Reverse Linked List", 
+        "similar_problems": [
+            "(M) Reverse Linked List II", 
+            " (M) Binary Tree Upside Down", 
+            " (E) Palindrome Linked List"
+        ], 
+        "total": 414172
+    }, 
+    {
+        "accepted": 113946, 
+        "companies": "Amazon", 
+        "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.\r\n\r\n\r\n\r\nAccording to the definition of LCA on Wikipedia: \u201cThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).\u201d\r\n\r\n\r\n\r\n        _______6______\r\n       /              \\\r\n    ___2__          ___8__\r\n   /      \\        /      \\\r\n   0      _4       7       9\r\n         /  \\\r\n         3   5\r\n\r\n\r\n\r\nFor example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Lowest Common Ancestor of a Binary Search Tree", 
+        "similar_problems": [
+            "(M) Lowest Common Ancestor of a Binary Tree"
+        ], 
+        "total": 299109
+    }, 
+    {
+        "accepted": 95753, 
+        "companies": "Amazon", 
+        "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining. \r\n\r\n\r\n\r\nFor example, \r\nGiven [0,1,0,2,1,0,1,3,2,1,2,1], return 6.\r\n\r\n\r\n\r\n\r\nThe above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Stack", 
+            "Two Pointers"
+        ], 
+        "name": "Trapping Rain Water", 
+        "similar_problems": [
+            "(M) Container With Most Water", 
+            " (M) Product of Array Except Self", 
+            " (H) Trapping Rain Water II"
+        ], 
+        "total": 271169
+    }, 
+    {
+        "accepted": 107442, 
+        "companies": "Amazon", 
+        "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.\r\n\r\n\r\npush(x) -- Push element x onto stack.\r\n\r\n\r\npop() -- Removes the element on top of the stack.\r\n\r\n\r\ntop() -- Get the top element.\r\n\r\n\r\ngetMin() -- Retrieve the minimum element in the stack.\r\n\r\n\r\n\r\n\r\nExample:\r\n\r\nMinStack minStack = new MinStack();\r\nminStack.push(-2);\r\nminStack.push(0);\r\nminStack.push(-3);\r\nminStack.getMin();   --> Returns -3.\r\nminStack.pop();\r\nminStack.top();      --> Returns 0.\r\nminStack.getMin();   --> Returns -2.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Stack", 
+            "Design"
+        ], 
+        "name": "Min Stack", 
+        "similar_problems": [
+            "(H) Sliding Window Maximum"
+        ], 
+        "total": 408383
+    }, 
+    {
+        "accepted": 4435, 
+        "companies": "Amazon", 
+        "description": "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. \r\n\r\nDesign an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure.\r\n\r\n\r\nThe encoded string should be as compact as possible.\r\n\r\n\r\n\r\nNote: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Serialize and Deserialize BST", 
+        "similar_problems": [
+            "(H) Serialize and Deserialize Binary Tree"
+        ], 
+        "total": 10436
+    }, 
+    {
+        "accepted": 151837, 
+        "companies": "Amazon", 
+        "description": "Given a linked list, determine if it has a cycle in it.\r\n\r\n\r\n\r\nFollow up:\r\nCan you solve it without using extra space?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List", 
+            "Two Pointers"
+        ], 
+        "name": "Linked List Cycle", 
+        "similar_problems": [
+            "(M) Linked List Cycle II"
+        ], 
+        "total": 423905
+    }, 
+    {
+        "accepted": 131025, 
+        "companies": "Amazon", 
+        "description": "Given two strings s and t, write a function to determine if t is an anagram of s. \r\n\r\nFor example,\r\ns = \"anagram\", t = \"nagaram\", return true.\r\ns = \"rat\", t = \"car\", return false.\r\n\r\n\r\nNote:\r\nYou may assume the string contains only lowercase alphabets.\r\n\r\nFollow up:\r\nWhat if the inputs contain unicode characters? How would you adapt your solution to such case?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Hash Table", 
+            "Sort"
+        ], 
+        "name": "Valid Anagram", 
+        "similar_problems": [
+            "(M) Group Anagrams", 
+            " (E) Palindrome Permutation", 
+            " (E) Find All Anagrams in a String"
+        ], 
+        "total": 291951
+    }, 
+    {
+        "accepted": 102660, 
+        "companies": "Amazon", 
+        "description": "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.\r\n\r\nFor example,\r\nGiven [3,2,1,5,6,4] and k = 2, return 5.\r\n\r\n\r\nNote: \r\nYou may assume k is always valid, 1 \u2264 k \u2264 array's length.\r\n\r\nCredits:Special thanks to @mithmatt for adding this problem and creating all test cases.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Heap", 
+            "Divide and Conquer"
+        ], 
+        "name": "Kth Largest Element in an Array", 
+        "similar_problems": [
+            "(M) Wiggle Sort II", 
+            " (M) Top K Frequent Elements", 
+            " (E) Third Maximum Number"
+        ], 
+        "total": 273878
+    }, 
+    {
+        "accepted": 107795, 
+        "companies": "Amazon", 
+        "description": "Write a program to find the node at which the intersection of two singly linked lists begins.\r\n\r\nFor example, the following two linked lists: \r\n\r\nA:          a1 \u2192 a2\r\n                   \u2198\r\n                     c1 \u2192 c2 \u2192 c3\r\n                   \u2197            \r\nB:     b1 \u2192 b2 \u2192 b3\r\n\r\nbegin to intersect at node c1.\r\n\r\nNotes:\r\n\r\nIf the two linked lists have no intersection at all, return null.\r\nThe linked lists must retain their original structure after the function returns. \r\nYou may assume there are no cycles anywhere in the entire linked structure.\r\nYour code should preferably run in O(n) time and use only O(1) memory.\r\n\r\n\r\n\r\nCredits:Special thanks to @stellari for adding this problem and creating all test cases.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List"
+        ], 
+        "name": "Intersection of Two Linked Lists", 
+        "similar_problems": [], 
+        "total": 358879
+    }, 
+    {
+        "accepted": 231270, 
+        "companies": "Amazon", 
+        "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.\r\n\r\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\r\n\r\n\r\nInput: (2 -> 4 -> 3) + (5 -> 6 -> 4)\r\nOutput: 7 -> 0 -> 8", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Linked List", 
+            "Math"
+        ], 
+        "name": "Add Two Numbers", 
+        "similar_problems": [
+            "(M) Multiply Strings", 
+            " (E) Add Binary", 
+            " (E) Sum of Two Integers", 
+            " (E) Add Strings", 
+            " (M) Add Two Numbers II"
+        ], 
+        "total": 879808
+    }, 
+    {
+        "accepted": 123288, 
+        "companies": "Amazon", 
+        "description": "Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words.\r\n\r\n\r\nFor example, given\r\ns = \"leetcode\",\r\ndict = [\"leet\", \"code\"].\r\n\r\n\r\n\r\nReturn true because \"leetcode\" can be segmented as \"leet code\".\r\n\r\n\r\n\r\nUPDATE (2017/1/4):\r\nThe wordDict parameter had been changed to a list of strings (instead of a set of strings). Please reload the code definition to get the latest changes.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Dynamic Programming"
+        ], 
+        "name": "Word Break", 
+        "similar_problems": [
+            "(H) Word Break II"
+        ], 
+        "total": 436376
+    }, 
+    {
+        "accepted": 110609, 
+        "companies": "Amazon", 
+        "description": "Given an array of strings, group anagrams together.\r\n\r\n\r\nFor example, given: [\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"], \r\nReturn:\r\n\r\n[\r\n  [\"ate\", \"eat\",\"tea\"],\r\n  [\"nat\",\"tan\"],\r\n  [\"bat\"]\r\n]\r\n\r\nNote: All inputs will be in lower-case.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "String"
+        ], 
+        "name": "Group Anagrams", 
+        "similar_problems": [
+            "(E) Valid Anagram", 
+            " (E) Group Shifted Strings"
+        ], 
+        "total": 346915
+    }, 
+    {
+        "accepted": 59689, 
+        "companies": "Amazon", 
+        "description": "Given two words (beginWord and endWord), and a dictionary's word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:\r\n\r\n\r\nOnly one letter can be changed at a time\r\nEach intermediate word must exist in the word list\r\n\r\n\r\n\r\nFor example,\r\n\r\n\r\nGiven:\r\nbeginWord = \"hit\"\r\nendWord = \"cog\"\r\nwordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\r\n\r\n\r\nReturn\r\n\r\n  [\r\n    [\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],\r\n    [\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]\r\n  ]\r\n\r\n\r\n\r\n\r\nNote:\r\n\r\nAll words have the same length.\r\nAll words contain only lowercase alphabetic characters.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Backtracking", 
+            "Breadth-first Search", 
+            "String"
+        ], 
+        "name": "Word Ladder II", 
+        "similar_problems": [], 
+        "total": 438382
+    }, 
+    {
+        "accepted": 82620, 
+        "companies": "Amazon", 
+        "description": "Given a singly linked list, determine if it is a palindrome.\r\n\r\nFollow up:\r\nCould you do it in O(n) time and O(1) space?", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List", 
+            "Two Pointers"
+        ], 
+        "name": "Palindrome Linked List", 
+        "similar_problems": [
+            "(E) Palindrome Number", 
+            " (E) Valid Palindrome", 
+            " (E) Reverse Linked List"
+        ], 
+        "total": 261222
+    }, 
+    {
+        "accepted": 134741, 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, determine if it is a valid binary search tree (BST).\r\n\r\n\r\n\r\nAssume a BST is defined as follows:\r\n\r\nThe left subtree of a node contains only nodes with keys less than the node's key.\r\nThe right subtree of a node contains only nodes with keys greater than the node's key.\r\nBoth the left and right subtrees must also be binary search trees.\r\n\r\n\r\n\r\nExample 1:\r\n\r\n    2\r\n   / \\\r\n  1   3\r\n\r\nBinary tree [2,1,3], return true.\r\n\r\n\r\nExample 2:\r\n\r\n    1\r\n   / \\\r\n  2   3\r\n\r\nBinary tree [1,2,3], return false.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree", 
+            "Depth-first Search"
+        ], 
+        "name": "Validate Binary Search Tree", 
+        "similar_problems": [
+            "(M) Binary Tree Inorder Traversal"
+        ], 
+        "total": 602891
+    }, 
+    {
+        "accepted": 46305, 
+        "companies": "Amazon", 
+        "description": "Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.\r\n\r\nThe function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.\r\n\r\nYou may assume that each input would have exactly one solution.\r\n\r\n\r\nInput: numbers={2, 7, 11, 15}, target=9\r\nOutput: index1=1, index2=2", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array", 
+            "Two Pointers", 
+            "Binary Search"
+        ], 
+        "name": "Two Sum II - Input array is sorted", 
+        "similar_problems": [
+            "(E) Two Sum"
+        ], 
+        "total": 96007
+    }, 
+    {
+        "accepted": 235396, 
+        "companies": "Amazon", 
+        "description": "Given a string, find the length of the longest substring without repeating characters.\r\n\r\nExamples:\r\n\r\nGiven \"abcabcbb\", the answer is \"abc\", which the length is 3.\r\n\r\nGiven \"bbbbb\", the answer is \"b\", with the length of 1.\r\n\r\nGiven \"pwwkew\", the answer is \"wke\", with the length of 3. Note that the answer must be a substring, \"pwke\" is a subsequence and not a substring.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "Two Pointers", 
+            "String"
+        ], 
+        "name": "Longest Substring Without Repeating Characters", 
+        "similar_problems": [
+            "(H) Longest Substring with At Most Two Distinct Characters"
+        ], 
+        "total": 993446
+    }, 
+    {
+        "accepted": 124554, 
+        "companies": "Amazon", 
+        "description": "Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Divide and Conquer", 
+            "Linked List", 
+            "Heap"
+        ], 
+        "name": "Merge k Sorted Lists", 
+        "similar_problems": [
+            "(E) Merge Two Sorted Lists", 
+            " (M) Ugly Number II"
+        ], 
+        "total": 480093
+    }, 
+    {
+        "accepted": 184141, 
+        "companies": "Amazon", 
+        "description": "Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Linked List"
+        ], 
+        "name": "Merge Two Sorted Lists", 
+        "similar_problems": [
+            "(H) Merge k Sorted Lists", 
+            " (E) Merge Sorted Array", 
+            " (M) Sort List", 
+            " (M) Shortest Word Distance II"
+        ], 
+        "total": 485127
+    }, 
+    {
+        "accepted": 174898, 
+        "companies": "Amazon", 
+        "description": "Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.\r\n\r\nNote: The solution set must not contain duplicate triplets.\r\n\r\n\r\nFor example, given array S = [-1, 0, 1, 2, -1, -4],\r\n\r\nA solution set is:\r\n[\r\n  [-1, 0, 1],\r\n  [-1, -1, 2]\r\n]", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array", 
+            "Two Pointers"
+        ], 
+        "name": "3Sum", 
+        "similar_problems": [
+            "(E) Two Sum", 
+            " (M) 3Sum Closest", 
+            " (M) 4Sum", 
+            " (M) 3Sum Smaller"
+        ], 
+        "total": 836531
+    }, 
+    {
+        "accepted": 136082, 
+        "companies": "Amazon", 
+        "description": "Given a set of distinct integers, nums, return all possible subsets.\r\n\r\nNote: The solution set must not contain duplicate subsets.\r\n\r\n\r\nFor example,\r\nIf nums = [1,2,3], a solution is:\r\n\r\n\r\n\r\n[\r\n  [3],\r\n  [1],\r\n  [2],\r\n  [1,2,3],\r\n  [1,3],\r\n  [2,3],\r\n  [1,2],\r\n  []\r\n]", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Array", 
+            "Backtracking", 
+            "Bit Manipulation"
+        ], 
+        "name": "Subsets", 
+        "similar_problems": [
+            "(M) Generalized Abbreviation"
+        ], 
+        "total": 370554
+    }, 
+    {
+        "accepted": 146977, 
+        "companies": "Amazon", 
+        "description": "Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).\r\n\r\n\r\nFor example:\r\nGiven binary tree [3,9,20,null,null,15,7],\r\n\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n\r\n\r\n\r\nreturn its level order traversal as:\r\n\r\n[\r\n  [3],\r\n  [9,20],\r\n  [15,7]\r\n]", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Tree", 
+            "Breadth-first Search"
+        ], 
+        "name": "Binary Tree Level Order Traversal", 
+        "similar_problems": [
+            "(M) Binary Tree Zigzag Level Order Traversal", 
+            " (E) Binary Tree Level Order Traversal II", 
+            " (E) Minimum Depth of Binary Tree", 
+            " (M) Binary Tree Vertical Order Traversal"
+        ], 
+        "total": 396801
+    },  
+    {
+        "accepted": 96357, 
+        "companies": "Amazon", 
+        "description": "Count the number of primes from 1 to less than or equal t n.",
+        "example": "If n equals 24. Return 2, 3, 5, 7, 11, 13, 17, 23", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Hash Table", 
+            "Math"
+        ], 
+        "name": "Count Primes", 
+        "similar_problems": [
+            "(E) Ugly Number", 
+            " (M) Ugly Number II", 
+            " (M) Perfect Squares"
+        ], 
+        "total": 368557
+    }, 
+    {
+        "accepted": 17144, 
+        "companies": "Amazon", 
+        "description": "Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).",
+        "example" :"Example given array 1 4 80 2 9. Return 4",
+        "difficulty": "Easy", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Third Maximum Number", 
+        "similar_problems": [
+            "(M) Kth Largest Element in an Array"
+        ], 
+        "total": 64061
+    }, 
+    {
+        "accepted": 100463, 
+        "companies": "Amazon", 
+        "description": "Given an index k, return the kth row of the Pascal's triangle.", 
+        "difficulty": "Easy", 
+        "hints": [
+            "Array"
+        ], 
+        "name": "Pascal's Triangle II", 
+        "similar_problems": [
+            "(E) Pascal's Triangle"
+        ], 
+        "total": 286713
+    }, 
+    {
+        "accepted": 13738, 
+        "companies": "Amazon", 
+        "description": "Given a string, sort it in decreasing order based on the frequency of characters.",
+        "example": "Given string b a b b b c e w q q q . Return b b b b q q q a c e w", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Hash Table", 
+            "Heap"
+        ], 
+        "name": "Sort Characters By Frequency", 
+        "similar_problems": [
+            "(M) Top K Frequent Elements"
+        ], 
+        "total": 27056
+    }, 
+    {
+        "accepted": 14298, 
+        "companies": "Amazon", 
+        "description": "Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.  You may assume the given string consists of lowercase English letters only and its length  will not exceed 10000. \r\n\r\nExample 1:\r\n\r\nInput: \"abab\"\r\n\r\nOutput: True\r\n\r\nExplanation: It's the substring \"ab\" twice.\r\n\r\n\r\n\r\nExample 2:\r\n\r\nInput: \"aba\"\r\n\r\nOutput: False\r\n\r\n\r\n\r\nExample 3:\r\n\r\nInput: \"abcabcabcabc\"\r\n\r\nOutput: True\r\n\r\nExplanation: It's the substring \"abc\" four times. (And the substring \"abcabc\" twice.)", 
+        "difficulty": "Easy", 
+        "hints": [
+            "String"
+        ], 
+        "name": "Repeated Substring Pattern", 
+        "similar_problems": [
+            "(E) Implement strStr()"
+        ], 
+        "total": 36144
+    }
+]

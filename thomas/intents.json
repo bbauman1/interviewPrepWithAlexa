@@ -1,13 +1,31 @@
 {
   "intents": [
     {
-      "intent": "GetQuestion"
+      "intent": "QuestionByDifficulty",
+      "slots": [
+        {
+          "name": "Diff",
+          "type": "Difficulty"
+        }
+      ]
     },
     {
-      "intent": "NoobQuestion"
+      "intent": "QuestionByName",
+      "slots": [
+        {
+          "name": "QuestionName",
+          "type": "AMAZON.LITERAL" 
+        }
+      ]
     },
     {
       "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "YesRepeat"
+    },
+    {
+      "intent": "NoRepeat"
     }
   ]
 }
