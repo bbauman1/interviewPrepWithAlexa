@@ -2,7 +2,7 @@
     {
         "accepted": 106145, 
         "companies": "Amazon", 
-        "description": "Design and implement a data structure for Least Recently Used (LRU) cache. Support the get and set functions, but remove the least recently used element when the cache is full.", 
+        "description": "Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set. get () with an input parameter of key - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. set() function with parameters key and value, Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.", 
         "example": "get with parameter one should return -1 since it is empty. Set with key equals 3 and value 5 then get 3 should return 5",
         "difficulty": "Hard", 
         "hints": [
@@ -18,8 +18,7 @@
     {
         "accepted": 82735, 
         "companies": "Amazon", 
-        "description": "Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.", 
-        "example": "Try using breadth first or depth first search",
+        "description": "Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.", 
         "difficulty": "Medium", 
         "hints": [
             "Depth-first Search", 
@@ -39,8 +38,7 @@
     {
         "accepted": 14133, 
         "companies": "Amazon", 
-        "description": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s. Strings consists of lowercase English letters only.",
-        "example": "Try using a hash table",
+        "description": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.\r\n\r\nStrings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100. The order of output does not matter. Example 1: Input:\r\ns: \"cbaebabacd\" p: \"abc\"\r\n\r\nOutput:\r\n[0, 6]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\r\nThe substring with start index = 6 is \"bac\", which is an anagram of a b c. Example 2:\r\n\r\nInput:\r\ns: \"abab\" p: \"ab\"\r\n\r\nOutput:\r\n[0, 1, 2]\r\n\r\nExplanation:\r\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\r\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\r\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".", 
         "difficulty": "Easy", 
         "hints": [
             "Hash Table"
@@ -55,8 +53,7 @@
     {
         "accepted": 79091, 
         "companies": "Amazon", 
-        "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.",
-        "example": "The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).", 
+        "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia: The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).", 
         "difficulty": "Medium", 
         "hints": [
             "Tree"
@@ -71,8 +68,7 @@
     {
         "accepted": 92215, 
         "companies": "Amazon", 
-        "description": "A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null. Return a deep copy of the list.", 
-        "example": "Try keeping track of the random pointers with a hash table",
+        "description": "A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.\r\n\r\n\r\n\r\nReturn a deep copy of the list.", 
         "difficulty": "Hard", 
         "hints": [
             "Hash Table", 
@@ -107,8 +103,7 @@
     {
         "accepted": 16645, 
         "companies": "Amazon", 
-        "description": "Design a data structure that supports all following operations in average O(1) time. Insert an item val to the set if not already present. Remove an item val from the set if present. Return a random element from current set of elements. Each element must have the same probability of being returned.", 
-        "example": "Try combining and array an a hash table",
+        "description": "Design a data structure that supports all following operations in average O(1) time.\r\n\r\n\r\n\r\ninsert(val): Inserts an item val to the set if not already present.\r\nremove(val): Removes an item val from the set if present.\r\ngetRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.\r\n\r\n\r\n\r\nExample:\r\n\r\n// Init an empty set.\r\nRandomizedSet randomSet = new RandomizedSet();\r\n\r\n// Inserts 1 to the set. Returns true as 1 was inserted successfully.\r\nrandomSet.insert(1);\r\n\r\n// Returns false as 2 does not exist in the set.\r\nrandomSet.remove(2);\r\n\r\n// Inserts 2 to the set, returns true. Set now contains [1,2].\r\nrandomSet.insert(2);\r\n\r\n// getRandom should return either 1 or 2 randomly.\r\nrandomSet.getRandom();\r\n\r\n// Removes 1 from the set, returns true. Set now contains [2].\r\nrandomSet.remove(1);\r\n\r\n// 2 was already in the set, so return false.\r\nrandomSet.insert(2);\r\n\r\n// Since 2 is the only number in the set, getRandom always return 2.\r\nrandomSet.getRandom();", 
         "difficulty": "Hard", 
         "hints": [
             "Array", 
@@ -143,8 +138,8 @@
     {
         "accepted": 164444, 
         "companies": "Amazon", 
-        "description": "Given a string s, find the longest palindromic substring in s.",
-        "example" : "Given b,a,b,c output: b,a,b.",
+        "description": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.",
+        "example" : "Example: Input: b a b a d Output: b a b Note: a b a is also a valid answer. Example: Input: c b b d Output: b b",
         "difficulty": "Medium", 
         "hints": [
             "String"
@@ -162,7 +157,7 @@
         "accepted": 62251, 
         "companies": "Amazon", 
         "description": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: Integers in each row are sorted in ascending from left to right. Integers in each column are sorted in ascending from top to bottom.",
-        "example": "Using divide an conquer or binary search are both appropriate here", 
+        "example": "For example, Consider the following matrix: [1,   4,  7, 11, 15],  [2,   5,  8, 12, 19],  [3,   6,  9, 16, 22],  [10, 13, 14, 17, 24],  [18, 21, 23, 26, 30] ] Given target = 5, return true. Given target = 20, return false.", 
         "difficulty": "Medium", 
         "hints": [
             "Binary Search", 
@@ -178,8 +173,7 @@
     {
         "accepted": 180214, 
         "companies": "Amazon", 
-        "description": "Reverse a singly linked list.", 
-        "example": "You can do this recursively or iteratively",
+        "description": "Reverse a singly linked list. Hint: A linked list can be reversed either iteratively or recursively. Could you implement both?", 
         "difficulty": "Easy", 
         "hints": [
             "Linked List"
@@ -196,8 +190,7 @@
     {
         "accepted": 113946, 
         "companies": "Amazon", 
-        "description": "Given a binary search tree, find the lowest common ancestor of two given nodes in the BST.", 
-        "example": "The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).",
+        "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST. According to the definition of LCA on Wikipedia: The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).", 
         "difficulty": "Easy", 
         "hints": [
             "Tree"
@@ -210,10 +203,28 @@
         "total": 299109
     }, 
     {
+        "accepted": 95753, 
+        "companies": "Amazon", 
+        "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining. \r\n\r\n\r\n\r\nFor example, \r\nGiven [0,1,0,2,1,0,1,3,2,1,2,1], return 6.\r\n\r\n\r\n\r\n\r\nThe above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!", 
+        "difficulty": "Hard", 
+        "hints": [
+            "Array", 
+            "Stack", 
+            "Two Pointers"
+        ], 
+        "name": "Trapping Rain Water", 
+        "id": 42, 
+        "similar_problems": [
+            "(M) Container With Most Water", 
+            " (M) Product of Array Except Self", 
+            " (H) Trapping Rain Water II"
+        ], 
+        "total": 271169
+    }, 
+    {
         "accepted": 107442, 
         "companies": "Amazon", 
-        "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. ",
-        "example": "The top function returns the top element on the stack", 
+        "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. push x -- Push element x onto stack. pop() -- Removes the element on top of the stack. top() -- Get the top element. getMin() -- Retrieve the minimum element in the stack. Example: MinStack minStack = new MinStack(); minStack.push(-2); minStack.push 0; minStack.push -3; minStack.getMin ;   --> Returns -3. minStack.pop(); minStack.top(); Returns 0. minStack.getMin(); Returns -2.", 
         "difficulty": "Easy", 
         "hints": [
             "Stack", 
@@ -225,12 +236,26 @@
             "(H) Sliding Window Maximum"
         ], 
         "total": 408383
-    },     
+    }, 
+    {
+        "accepted": 4435, 
+        "companies": "Amazon", 
+        "description": "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. \r\n\r\nDesign an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure.\r\n\r\n\r\nThe encoded string should be as compact as possible.\r\n\r\n\r\n\r\nNote: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.", 
+        "difficulty": "Medium", 
+        "hints": [
+            "Tree"
+        ], 
+        "name": "Serialize and Deserialize BST", 
+        "id": 449, 
+        "similar_problems": [
+            "(H) Serialize and Deserialize Binary Tree"
+        ], 
+        "total": 10436
+    }, 
     {
         "accepted": 151837, 
         "companies": "Amazon", 
-        "description": "Given a linked list, determine if it has a cycle in it. Follow up:\r\nCan you solve it without using extra space?", 
-        "example": "Try keeping track of two pointers in the list",
+        "description": "Given a linked list, determine if it has a cycle in it.\r\n\r\n\r\n\r\nFollow up:\r\nCan you solve it without using extra space?", 
         "difficulty": "Easy", 
         "hints": [
             "Linked List", 
@@ -247,7 +272,7 @@
         "accepted": 131025, 
         "companies": "Amazon", 
         "description": "Given two strings s and t, write a function to determine if t is an anagram of s.",
-        "example": "For example, s = rat, t = tar, return true.", 
+        "example": "For example,s = anagram, t = nagaram, return true. s = rat, t = car, return false.Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?", 
         "difficulty": "Easy", 
         "hints": [
             "Hash Table", 
@@ -265,8 +290,8 @@
     {
         "accepted": 102660, 
         "companies": "Amazon", 
-        "description": "Find the kth largest element in an unsorted array.",
-        "example": " Note that it is the kth largest element in the sorted order, not the kth distinct element.", 
+        "description": "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.For example.",
+        "example": "Given [3,2,1,5,6,4] and k = 2, return 5. Note: You may assume k is always valid.", 
         "difficulty": "Medium", 
         "hints": [
             "Heap", 
@@ -285,7 +310,6 @@
         "accepted": 107795, 
         "companies": "Amazon", 
         "description": "Write a program to find the node at which the intersection of two singly linked lists begins.", 
-        "example": "If two lists merge at the fourth node, then return that node",
         "difficulty": "Easy", 
         "hints": [
             "Linked List"
@@ -298,8 +322,7 @@
     {
         "accepted": 231270, 
         "companies": "Amazon", 
-        "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.",
-        "example": "You may assume the two numbers do not contain any leading zero, except the number 0 itself.", 
+        "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.\r\n\r\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\r\n\r\n\r\nInput: (2 -> 4 -> 3) + (5 -> 6 -> 4)\r\nOutput: 7 -> 0 -> 8", 
         "difficulty": "Medium", 
         "hints": [
             "Linked List", 
@@ -319,8 +342,7 @@
     {
         "accepted": 123288, 
         "companies": "Amazon", 
-        "description": "Given a non-empty string s and a dictionary containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words. ",
-        "example": "Given the string leetcode and a dictionary containing the two words leet and code, return true.", 
+        "description": "Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words.\r\n\r\n\r\nFor example, given\r\ns = \"leetcode\",\r\ndict = [\"leet\", \"code\"].\r\n\r\n\r\n\r\nReturn true because \"leetcode\" can be segmented as \"leet code\".\r\n\r\n\r\n\r\nUPDATE (2017/1/4):\r\nThe wordDict parameter had been changed to a list of strings (instead of a set of strings). Please reload the code definition to get the latest changes.", 
         "difficulty": "Medium", 
         "hints": [
             "Dynamic Programming"
@@ -335,8 +357,7 @@
     {
         "accepted": 110609, 
         "companies": "Amazon", 
-        "description": "Given an array of strings, group anagrams together. All inputs will be in lower-case.", 
-        "example": "A hash table could help keep track of the strings",
+        "description": "Given an array of strings, group anagrams together.\r\n\r\n\r\nFor example, given: [\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"], \r\nReturn:\r\n\r\n[\r\n  [\"ate\", \"eat\",\"tea\"],\r\n  [\"nat\",\"tan\"],\r\n  [\"bat\"]\r\n]\r\n\r\nNote: All inputs will be in lower-case.", 
         "difficulty": "Medium", 
         "hints": [
             "Hash Table", 
@@ -551,7 +572,7 @@
         "accepted": 13738, 
         "companies": "Amazon", 
         "description": "Given a string, sort it in decreasing order based on the frequency of characters.",
-        "example": "Given string, b, a, b, b, b, c, e, w, q, q, q, you should return, b, b, b, b, q, q, q, a, c, e, w.", 
+        "example": "Given string, b, b, q, b, e, q, you should return, b, b, b, q, q, e.", 
         "difficulty": "Medium", 
         "hints": [
             "Hash Table", 
