@@ -84,7 +84,8 @@
     {
         "accepted": 161724,
         "companies": "Amazon",
-        "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\r\n\r\nThe brackets must close in the correct order, \"()\" and \"()[]{}\" are all valid but \"(]\" and \"([)]\" are not.", 
+        "description": "Given a string containing just the parentheses, brackets, and curly brace characters, determine if the input string is valid. The brackets must close in the correct order",
+        "example": "given open-parentheses, close-parenthses, return true. Given open-parentheses, close-parenthses, close-parenthses return false", 
         "difficulty": "Easy", 
         "hints": [
             "Stack", 
