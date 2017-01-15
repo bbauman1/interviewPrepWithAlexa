@@ -14,6 +14,8 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 with open('companies.json', 'r') as f:
 	q_dict = json.load(f)
 
+timer=None
+
 def get_difficulty(diff):
 	questions = []
 	for q in q_dict:
