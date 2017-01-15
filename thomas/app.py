@@ -93,7 +93,7 @@ def ask_another_question():
 	norm_difficulty = session.attributes['difficulty']
 	q = get_difficulty(norm_difficulty)
 	session.attributes['company'] = q 
-	return statement(q['description']+' Would you like me to repeat the question or give an example?')
+	return question(q['description']+' Would you like me to repeat the question or give an example?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
