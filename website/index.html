@@ -4,22 +4,24 @@
 	<head>
 		<title>Interview with Alexa</title>
 		<meta charset="utf-8" />
+		<link type="image/x-icon" rel="icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<link rel="stylesheet" href="assets/css/styles.css" />
+
 	</head>
 	<body onload="onload()">
 		<section>
 			<!-- Header -->
 				<div id="header">
-					<span class="logo icon fa-microphone"></span>
+					<span class="logo icon fa-amazon"></span>
 					<h1>Interview with Alexa</h1>
 					<p>Simulate interviews the best way possible
 					<br />
 					Get hired by top companies</p>
-					<a class="button scrolly go-to-dbthing" style="margin-top:32px;">Fuck Alexa</a>
+					<a class="button scrolly go-to-dbthing" style="margin-top:32px;">Practice Now</a>
 				</div>
 		</section>
 		<section id="dbthing">
@@ -38,40 +40,11 @@
 								<th>ID</th>
 								<th>Name</th>
 								<th>Description</th>
-
 								<th>Recording</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Two Sum</td>
-								<td>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution.</td>
-								<td>
-									<audio controls>
-									  <source type="audio/wav">
-										Your browser does not support the audio element.
-									</audio>
-								</td>
-							</tr>
-							<tr>
-								<td>24524</td>
-								<td>Nothing</td>
-								<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-								<td>19.99</td>
-							</tr>
-							<tr>
-								<td>45815</td>
-								<td>Something</td>
-								<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-								<td>29.99</td>
-							</tr>
-							<tr>
-								<td>24524</td>
-								<td>Nothing</td>
-								<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-								<td>19.99</td>
-							</tr>
+						<tbody id="table-body">
+
 						</tbody>
 						<tfoot>
 						</tfoot>
@@ -94,42 +67,62 @@
 			  };
 			  firebase.initializeApp(config);
 			</script>
+			<script type='text/javascript' src='assets/js/handlebars-v4.0.5.js'></script>
+			<script id="row-template" type="text/x-handlebars-template">
+				<tr>
+					<td>{{id}}</td>
+					<td><a href="{{leetcode}}" target="_blank">{{name}}</a></td>
+					<td>{{description}}</td>
+					<td>
+						<audio controls>
+							<source src="{{link}}" type="audio/wav">
+							Your browser does not support the audio element.
+						</audio>
+					</td>
+				</tr>
+				</script>
+
+
 
 			<script>
 
+			function generatePostHtml(id, name, description, link) {
+
+					var leetcode = "https://leetcode.com/problems/" + name.replace(" ", "-");
+
+					var source = document.getElementById("row-template").innerHTML;
+					var template = Handlebars.compile(source);
+					var context = {id: id, name: name, description: description, leetcode: leetcode, link: link};
+
+					var parent = document.getElementById("table-body");
+					parent.insertAdjacentHTML('beforeend', template(context));
+			}
+
 				function onload() {
+					firebase.auth().onAuthStateChanged(function(user) {
+					  if (user) {
+					    // User is signed in.
+					    var isAnonymous = user.isAnonymous;
+					    var uid = user.uid;
+							var postRef = firebase.database().ref();
+								postRef.on('child_added', function(data) {
+									if(data.key != -1) {
+										generatePostHtml(data.key, data.val().name, data.val().description, data.val().url);
+									}
+								});
 
-					firebase.auth().signInAnonymously().catch(function(error) {
-						// Handle Errors here.
-						var errorCode = error.code;
-						var errorMessage = error.message;
-						// ...
-						});
+					  } else {
+							firebase.auth().signInAnonymously().catch(function(error) {
+							  var errorCode = error.code;
+							  var errorMessage = error.message;
+							  // ...
+							});
+					  }					  
+					});
 				}
 
-				function getStuff() {
-					var storage = firebase.storage();
-					var pathReference = storage.ref('');
-					alert(pathReference.child('cat_y.wav').downloadURL);
-				}
-
-				firebase.auth().onAuthStateChanged(function(user) {
-				  if (user) {
-				    // User is signed in.
-				    var isAnonymous = user.isAnonymous;
-				    var uid = user.uid;
-						getStuff();
-				    // ...
-				  } else {
-				    // User is signed out.
-				    // ...
-				  }
-				  // ...
-				});
 
 			</script>
-
-
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
