@@ -92,7 +92,7 @@ def ask_another_question():
 	norm_difficulty = session.attributes['difficulty']
 	q = get_difficulty(norm_difficulty)
 	session.attributes['company'] = q 
-	return statement(q['description']+' Would you like me to repeat the question or give an example?')
+	return question(q['description']+' Would you like me to repeat the question or give an example?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
@@ -110,7 +110,7 @@ def resume():
 
 @ask.intent('AMAZON.StopIntent')
 def stop():
-    return audio('Congrats! You are done with the interview. Check out leetcode question number {}. See you later!'.format(session.attributes['id'])).clear_queue(stop=True)
+    return audio('Congrats! You are done with the interview. Check out leetcode question number {}. See you later!'.format(session.attributes['company']['id'])).clear_queue(stop=True)
 
 @ask.session_ended
 def stop():
