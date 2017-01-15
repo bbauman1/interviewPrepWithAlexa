@@ -7,7 +7,7 @@ QuestionByDifficulty a {Diff} question
 
 QuestionExample give me the example
 QuestionExample show the example
-QuestionExample example
+
 YesRepeat repeat the question
 YesRepeat Yes repeat the question
 
@@ -19,6 +19,8 @@ Stop stop the app
 
 AnotherQuestion skip this question
 AnotherQuestion I already know this question
+AnotherQuestion skip this
+AnotherQuestion next
 
 LessTime give me less time
 LessTime No I dont need that much time
