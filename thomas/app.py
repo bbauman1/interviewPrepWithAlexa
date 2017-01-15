@@ -16,8 +16,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 offset = 60000 * 60
 
-stream_url = 'https://firebasestorage.googleapis.com/v0/b/alexa-76077.appspot.com/o/silence.wav?alt=media&token=0bf932d4-de02-4653-a047-8ac26f583837'
-
+url_streaming_the_goods = "https://firebasestorage.googleapis.com/v0/b/alexa-76077.appspot.com/o/bell-ringing-01.mp3?alt=media&token=b8e6860d-2676-427c-a162-310b40c0e899"
 with open('companies.json', 'r') as f:
 	q_dict = json.load(f)
 
@@ -78,7 +77,7 @@ def less_question():
 @ask.intent('MoreTime')
 def more_question():
 	message = "Sweet, you will have a 40 minute interview. It starts now. Good luck!"
-	return statement(message)
+	return audio(message).play(url_streaming_the_goods)
 
 @ask.intent('Stop')
 def stop_question():
@@ -99,6 +98,19 @@ def ask_another_question():
 def help_intent():
 	message = "Ask again"
 	return question(message).reprompt(message)
+
+@ask.intent('AMAZON.PauseIntent')
+def pause():
+    return audio('Pause the interview').stop()
+
+
+@ask.intent('AMAZON.ResumeIntent')
+def resume():
+    return audio('Resuming the interview').resume()
+
+@ask.intent('AMAZON.StopIntent')
+def stop():
+    return audio('Congrats! You are done with the interview. Check out leetcode question number {}. See you later!'.format(session.attributes['id'])).clear_queue(stop=True)
 
 @ask.session_ended
 def stop():
