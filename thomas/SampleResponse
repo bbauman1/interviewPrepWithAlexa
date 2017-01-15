@@ -28,6 +28,11 @@ LessTime No I dont need that much time
 MoreTime I think I need more time
 MoreTime give me more time
 
+DefaultTime that time works for me
+DefaultTime 30 minutes works
+DefaultTime that is enough time
+DefaultTime Yeah it works
+
 AMAZON.StopIntent I am done
 AMAZON.StopIntent I finished early
 AMAZON.StopIntent Stop the interview

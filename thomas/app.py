@@ -32,10 +32,6 @@ def get_difficulty(diff):
 def welcome_intern():
     return question(render_template('welcome'))
 
-@ask.intent('Default')
-def default_quesiton():
-	return question('come again hombre...?')
-
 @ask.intent('QuestionByDifficulty', convert={'Diff':'string'})
 def question_type_difficulty(Diff):
 	if not isinstance(Diff, basestring) or Diff.lower().strip() not in ['easy', 'medium', 'hard']:
@@ -72,11 +68,16 @@ def repeat_question():
 @ask.intent('LessTime')
 def less_question():
 	message = "Okay you will have a 20 minute interview. It starts now. Good luck!"
-	return statement(message)
+	return audio(message).play(url_streaming_the_goods)
 
 @ask.intent('MoreTime')
 def more_question():
 	message = "Sweet, you will have a 40 minute interview. It starts now. Good luck!"
+	return audio(message).play(url_streaming_the_goods)
+
+@ask.intent('DefaultTime')
+def default_time():
+	message = "You are up for a thirty minute interview! It starts now. Good luck!"
 	return audio(message).play(url_streaming_the_goods)
 
 @ask.intent('Stop')
@@ -92,7 +93,7 @@ def ask_another_question():
 	norm_difficulty = session.attributes['difficulty']
 	q = get_difficulty(norm_difficulty)
 	session.attributes['company'] = q 
-	return statement(q['description']+' Would you like me to repeat the question or give an example?')
+	return question(q['description']+' Would you like me to repeat the question or give an example?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
