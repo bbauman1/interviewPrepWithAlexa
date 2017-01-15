@@ -1,26 +1,29 @@
 QuestionByDifficulty ask me a {Diff} question
 QuestionByDifficulty give me a {Diff} one
 QuestionByDifficulty lets do a {Diff} question
-QuestionByDifficulty {Diff}
 QuestionByDifficulty a {Diff} one
 QuestionByDifficulty a {Diff} question
+QuestionByDifficulty {Diff}
 
-QuestionExample give me the example
-QuestionExample show the example
+QuestionExample give me tip
+QuestionExample I need help
+QuestionExample tip
+QuestionExample a tip
+
 
 YesRepeat repeat the question
 YesRepeat Yes repeat the question
+YesRepeat question
 
 NoRepeat No I have finished
 NoRepeat No I am done
 NoRepeat I am good to go
 
-Stop stop the app
+Stop stop the interview
 
 AnotherQuestion skip this question
 AnotherQuestion I already know this question
 AnotherQuestion skip this
-AnotherQuestion next
 
 LessTime give me less time
 LessTime No I dont need that much time
@@ -29,9 +32,9 @@ MoreTime I think I need more time
 MoreTime give me more time
 
 DefaultTime that time works for me
-DefaultTime 30 minutes works
+DefaultTime thirty minutes works
 DefaultTime that is enough time
-DefaultTime Yeah it works
+DefaultTime Yeah that works
 
 AMAZON.StopIntent I am done
 AMAZON.StopIntent I finished early

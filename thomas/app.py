@@ -35,14 +35,14 @@ def welcome_intern():
 @ask.intent('QuestionByDifficulty', convert={'Diff':'string'})
 def question_type_difficulty(Diff):
 	if not isinstance(Diff, basestring) or Diff.lower().strip() not in ['easy', 'medium', 'hard']:
-		return question(render_template('invalid_question_difficulty')).reprompt('Would you liked an easy, medium, or hard problem')
+		return question(render_template('invalid_question_difficulty')).reprompt('Would you liked an easy, medium, or hard problem?')
 
 	norm_difficulty = Diff.lower().strip()
 	q = get_difficulty(norm_difficulty)
 
 	session.attributes['company'] = q 
 	session.attributes['difficulty'] = norm_difficulty
-	return question(q['description'] + ' Would you like me to repeat the question or give an example?')
+	return question(q['description'] + ' Would you like me to repeat the question or give a tip?')
 
 @ask.intent('QuestionExample')
 def example_for_question():
@@ -51,13 +51,13 @@ def example_for_question():
 	q = session.attributes['company']
 
 	if 'example' not in q:
-		return question('No example available. Would you like me to repeat the question?')
+		return question('No tip available. Would you like me to repeat the question?')
 	
-	return question(q['example']+', Would you like to repeat the example or question?')
+	return question(q['example']+', Would you like to repeat the tip or question?')
 
 @ask.intent('YesRepeat')
 def repeat_question():
-	return question(session.attributes['company']['description'] + ' Would you like me to repeat the question or give a an example?')
+	return question(session.attributes['company']['description'] + ' Would you like me to repeat the question or give a tip?')
 
 @ask.intent('NoRepeat')
 def repeat_question():
@@ -93,7 +93,7 @@ def ask_another_question():
 	norm_difficulty = session.attributes['difficulty']
 	q = get_difficulty(norm_difficulty)
 	session.attributes['company'] = q 
-	return question(q['description']+' Would you like me to repeat the question or give an example?')
+	return question(q['description']+' Would you like me to repeat the question or give a tip?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
@@ -111,7 +111,7 @@ def resume():
 
 @ask.intent('AMAZON.StopIntent')
 def stop():
-    return audio('Congrats! You are done with the interview. Check out leetcode question number {}. See you later!'.format(session.attributes['id'])).clear_queue(stop=True)
+	return audio('Congrats! You are done with the interview. Check out leetcode question number {}. See you later!'.format(session.attributes['company']['id'])).clear_queue(stop=True)
 
 @ask.session_ended
 def stop():
