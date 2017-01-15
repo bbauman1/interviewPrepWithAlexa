@@ -88,7 +88,7 @@
 
 			function generatePostHtml(id, name, description, link) {
 
-					var leetcode = "https://leetcode.com/problems/" + name.replace(" ", "-");
+					var leetcode = "https://leetcode.com/problems/" + name.split(' ').join('-');
 
 					var source = document.getElementById("row-template").innerHTML;
 					var template = Handlebars.compile(source);
@@ -117,7 +117,7 @@
 							  var errorMessage = error.message;
 							  // ...
 							});
-					  }					  
+					  }
 					});
 				}
 
