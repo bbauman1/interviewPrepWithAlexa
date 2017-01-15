@@ -99,7 +99,9 @@
 				function onload() {
 					var postRef = firebase.database().ref('problems/');
 						postRef.on('child_added', function(data) {
-						generatePostHtml(data.key, data.val().name, data.val().description, data.val().url);
+						if(data.key != -1) {
+							generatePostHtml(data.key, data.val().name, data.val().description, data.val().url);
+						}						
 					});
 
 				}
