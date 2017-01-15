@@ -1,40 +1,58 @@
 {
-  "intents": [
-    {
-      "intent": "QuestionByDifficulty",
-      "slots": [
+    "intents": [
         {
-          "name": "Diff",
-          "type": "Difficulty"
-        }
-      ]
-    },
-    {
-      "intent": "QuestionByName",
-      "slots": [
+            "intent": "AMAZON.ResumeIntent"
+        },
         {
-          "name": "QuestionName",
-          "type": "AMAZON.LITERAL" 
+            "intent": "AMAZON.PauseIntent"
+        },
+        {
+            "intent": "QuestionByDifficulty",
+            "slots": [
+                {
+                    "name": "Diff",
+                    "type": "Difficulty"
+                }
+            ]
+        },
+        {
+            "intent": "QuestionByName",
+            "slots": [
+                {
+                    "name": "QuestionName",
+                    "type": "AMAZON.LITERAL"
+                }
+            ]
+        },
+        {
+            "intent": "AMAZON.HelpIntent"
+        },
+        {
+            "intent": "YesRepeat"
+        },
+        {
+            "intent": "NoRepeat"
+        },
+        {
+            "intent": "QuestionExample"
+        },
+        {
+            "intent": "Stop"
+        },
+        {
+            "intent": "AnotherQuestion"
+        },
+        {
+            "intent": "StarterTime",
+            "slots": [
+                {
+                    "name": "Time",
+                    "type": "AMAZON.NUMBER"
+                }
+            ]
+        },
+        {
+            "intent": "DefaultTime"
         }
-      ]
-    },
-    {
-      "intent": "AMAZON.HelpIntent"
-    },
-    {
-      "intent": "YesRepeat"
-    },
-    {
-      "intent": "NoRepeat"
-    },
-    {
-      "intent": "QuestionExample"
-    },
-    {
-      "intent": "Stop"
-    },
-    {
-      "intent": "AnotherQuestion"
-    }
-  ]
+    ]
 }
