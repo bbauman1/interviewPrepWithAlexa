@@ -1,15 +1,22 @@
+import datetime
 import logging
 import json
+import time
 
 from random import randint
 from flask import Flask, render_template
-from flask_ask import Ask, statement, question, session
+from flask_ask import Ask, statement, question, session, audio
+from dateutil.relativedelta import relativedelta
 
 app = Flask(__name__)
 
 ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+
+offset = 60000 * 60
+
+stream_url = 'https://firebasestorage.googleapis.com/v0/b/alexa-76077.appspot.com/o/silence.wav?alt=media&token=0bf932d4-de02-4653-a047-8ac26f583837'
 
 with open('companies.json', 'r') as f:
 	q_dict = json.load(f)
@@ -40,10 +47,6 @@ def question_type_difficulty(Diff):
 
 	session.attributes['company'] = q 
 	session.attributes['difficulty'] = norm_difficulty
-	print("++++++++++++++++")
-	print(q['name'])
-	print("++++++++++++++++")
-
 	return question(q['description'] + ' Would you like me to repeat the question or give an example?')
 
 @ask.intent('QuestionExample')
@@ -65,11 +68,21 @@ def repeat_question():
 def repeat_question():
 	if 'company' not in session.attributes:
 		return statement('Thanks for coding with us!')
-	return statement('Good luck! When you are done plug in your answer into question number {} on leetcode! papa bless'.format(session.attributes['company']['id']))
+	return question('The default time is 30 minutes. Is it alright?')
+
+@ask.intent('LessTime')
+def less_question():
+	message = "Okay you will have a 20 minute interview. It starts now. Good luck!"
+	return statement(message)
+
+@ask.intent('MoreTime')
+def more_question():
+	message = "Sweet, you will have a 40 minute interview. It starts now. Good luck!"
+	return statement(message)
 
 @ask.intent('Stop')
 def stop_question():
-	return statement('Thanks for coding with us!')
+	return statement('Ending internview prep')
 
 @ask.intent('AnotherQuestion')
 def ask_another_question():
@@ -80,12 +93,16 @@ def ask_another_question():
 	norm_difficulty = session.attributes['difficulty']
 	q = get_difficulty(norm_difficulty)
 	session.attributes['company'] = q 
-	return question(q['description']+' Would you like me to repeat the question or give an example?')
+	return statement(q['description']+' Would you like me to repeat the question or give an example?')
 
 @ask.intent('AMAZON.HelpIntent')
 def help_intent():
 	message = "Ask again"
 	return question(message).reprompt(message)
+
+@ask.session_ended
+def stop():
+	return "", 200
 
 
 if __name__ == '__main__':
