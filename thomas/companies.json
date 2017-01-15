@@ -89,7 +89,7 @@
         "accepted": 161724,
         "companies": "Amazon",
         "description": "Given a string containing just the parentheses, brackets, and curly brace characters, determine if the input string is valid. The brackets must close in the correct order",
-        "example": "Given open-parentheses, closed-parentheses, closed-parentheses, return false", 
+        "example": "Try using a stack", 
         "difficulty": "Easy", 
         "hints": [
             "Stack", 
